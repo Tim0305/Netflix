@@ -1,24 +1,49 @@
 #include "Serie.h"
 
-Serie::Serie(
-    int Id,
-    string Nombre,
-    string Descripcion,
-    string Genero,
-    double Calificacion)
-    :
-    Contenido(
-        Id,
-        Nombre,
-        Descripcion,
-        Genero,
-        Calificacion)
-{}
+Serie::Serie() : Contenido()
+{
+}
 
-void Serie::AgregarTemporada(Temporada temp){
-    temporadas.push_back(temp);
+Serie::Serie(
+	int id,
+	string nombre,
+	int duracion,
+	string genero)
+	:
+	Contenido(
+		id,
+		nombre,
+		duracion,
+		genero)
+{
+}
+
+void Serie::agregarTemporada(Temporada temporada){
+	temporadas.push_back(temporada);
 }
 
 double Serie::getCalificacion(){
-    return calificacion;
+
+	if(temporadas.size() == 0){
+		return 0;
+	}
+
+	double suma = 0;
+
+	for(int i = 0; i < temporadas.size(); i++){
+		suma += temporadas[i].getCalificacion();
+	}
+
+	return suma / temporadas.size();
+}
+
+void Serie::mostrar(){
+
+	cout << "----- SERIE -----" << endl;
+	cout << "ID: " << id << endl;
+	cout << "Nombre: " << nombre << endl;
+	cout << "Genero: " << genero << endl;
+	cout << "Duracion: " << duracion << endl;
+	cout << "Calificacion: " << getCalificacion() << endl;
+	cout << "Temporadas: " << temporadas.size() << endl;
 }
