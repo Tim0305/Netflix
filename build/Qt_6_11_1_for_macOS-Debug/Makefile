@@ -224,6 +224,30 @@ Netflix_autogen/mocs_compilation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Netflix.dir/build.make CMakeFiles/Netflix.dir/Netflix_autogen/mocs_compilation.cpp.s
 .PHONY : Netflix_autogen/mocs_compilation.cpp.s
 
+loginwindow.o: loginwindow.cpp.o
+.PHONY : loginwindow.o
+
+# target to build an object file
+loginwindow.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Netflix.dir/build.make CMakeFiles/Netflix.dir/loginwindow.cpp.o
+.PHONY : loginwindow.cpp.o
+
+loginwindow.i: loginwindow.cpp.i
+.PHONY : loginwindow.i
+
+# target to preprocess a source file
+loginwindow.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Netflix.dir/build.make CMakeFiles/Netflix.dir/loginwindow.cpp.i
+.PHONY : loginwindow.cpp.i
+
+loginwindow.s: loginwindow.cpp.s
+.PHONY : loginwindow.s
+
+# target to generate assembly for a file
+loginwindow.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Netflix.dir/build.make CMakeFiles/Netflix.dir/loginwindow.cpp.s
+.PHONY : loginwindow.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -272,6 +296,30 @@ mainwindow.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Netflix.dir/build.make CMakeFiles/Netflix.dir/mainwindow.cpp.s
 .PHONY : mainwindow.cpp.s
 
+signupwindow.o: signupwindow.cpp.o
+.PHONY : signupwindow.o
+
+# target to build an object file
+signupwindow.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Netflix.dir/build.make CMakeFiles/Netflix.dir/signupwindow.cpp.o
+.PHONY : signupwindow.cpp.o
+
+signupwindow.i: signupwindow.cpp.i
+.PHONY : signupwindow.i
+
+# target to preprocess a source file
+signupwindow.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Netflix.dir/build.make CMakeFiles/Netflix.dir/signupwindow.cpp.i
+.PHONY : signupwindow.cpp.i
+
+signupwindow.s: signupwindow.cpp.s
+.PHONY : signupwindow.s
+
+# target to generate assembly for a file
+signupwindow.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Netflix.dir/build.make CMakeFiles/Netflix.dir/signupwindow.cpp.s
+.PHONY : signupwindow.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -290,12 +338,18 @@ help:
 	@echo "... Netflix_autogen/mocs_compilation.o"
 	@echo "... Netflix_autogen/mocs_compilation.i"
 	@echo "... Netflix_autogen/mocs_compilation.s"
+	@echo "... loginwindow.o"
+	@echo "... loginwindow.i"
+	@echo "... loginwindow.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
 	@echo "... mainwindow.o"
 	@echo "... mainwindow.i"
 	@echo "... mainwindow.s"
+	@echo "... signupwindow.o"
+	@echo "... signupwindow.i"
+	@echo "... signupwindow.s"
 .PHONY : help
 
 

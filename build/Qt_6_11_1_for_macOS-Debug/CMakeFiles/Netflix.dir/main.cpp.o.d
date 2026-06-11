@@ -993,6 +993,9 @@ CMakeFiles/Netflix.dir/main.cpp.o: \
   /Users/timoteo/Qt/6.11.1/macos/lib/QtGui.framework/Headers/qcursor.h \
   /Users/timoteo/Qt/6.11.1/macos/lib/QtGui.framework/Headers/qbitmap.h \
   /Users/timoteo/Qt/6.11.1/macos/lib/QtWidgets.framework/Headers/qtabwidget.h \
+  /Users/timoteo/Materias/Tec\ de\ Monterrey/2do\ Semestre/Programacion\ Orientada\ a\ Objetos/ProyectoFinal/Netflix/loginwindow.h \
+  /Users/timoteo/Qt/6.11.1/macos/lib/QtWidgets.framework/Headers/QWidget \
+  /Users/timoteo/Materias/Tec\ de\ Monterrey/2do\ Semestre/Programacion\ Orientada\ a\ Objetos/ProyectoFinal/Netflix/signupwindow.h \
   /Users/timoteo/Qt/6.11.1/macos/lib/QtWidgets.framework/Headers/QApplication \
   /Users/timoteo/Qt/6.11.1/macos/lib/QtWidgets.framework/Headers/qapplication.h \
   /Users/timoteo/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qcoreapplication.h \

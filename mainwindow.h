@@ -2,6 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "loginwindow.h"
+#include "signupwindow.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -19,5 +21,9 @@ public:
 
 private:
     Ui::MainWindow *ui;
+    LoginWindow *loginWindow;
+    SignUpWindow *signUpWindow;
+    void showSignUpWindow();
+    void showLoginWindow();
 };
 #endif // MAINWINDOW_H

@@ -24,6 +24,8 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
         Contenido.h Episodio.h Pelicula.h Serie.h Temporada.h Usuario.h
+        loginwindow.h loginwindow.cpp loginwindow.ui
+        signupwindow.h signupwindow.cpp signupwindow.ui
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET Netflix APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR

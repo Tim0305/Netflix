@@ -419,9 +419,21 @@
 			null
 		],
 		[
+			"/Users/timoteo/Materias/Tec de Monterrey/2do Semestre/Programacion Orientada a Objetos/ProyectoFinal/Netflix/loginwindow.h",
+			"MU",
+			"EWIEGA46WW/moc_loginwindow.cpp",
+			null
+		],
+		[
 			"/Users/timoteo/Materias/Tec de Monterrey/2do Semestre/Programacion Orientada a Objetos/ProyectoFinal/Netflix/mainwindow.h",
 			"MU",
 			"EWIEGA46WW/moc_mainwindow.cpp",
+			null
+		],
+		[
+			"/Users/timoteo/Materias/Tec de Monterrey/2do Semestre/Programacion Orientada a Objetos/ProyectoFinal/Netflix/signupwindow.h",
+			"MU",
+			"EWIEGA46WW/moc_signupwindow.cpp",
 			null
 		]
 	],
@@ -485,12 +497,22 @@
 	"SOURCES" : 
 	[
 		[
+			"/Users/timoteo/Materias/Tec de Monterrey/2do Semestre/Programacion Orientada a Objetos/ProyectoFinal/Netflix/loginwindow.cpp",
+			"MU",
+			null
+		],
+		[
 			"/Users/timoteo/Materias/Tec de Monterrey/2do Semestre/Programacion Orientada a Objetos/ProyectoFinal/Netflix/main.cpp",
 			"MU",
 			null
 		],
 		[
 			"/Users/timoteo/Materias/Tec de Monterrey/2do Semestre/Programacion Orientada a Objetos/ProyectoFinal/Netflix/mainwindow.cpp",
+			"MU",
+			null
+		],
+		[
+			"/Users/timoteo/Materias/Tec de Monterrey/2do Semestre/Programacion Orientada a Objetos/ProyectoFinal/Netflix/signupwindow.cpp",
 			"MU",
 			null
 		]

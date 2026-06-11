@@ -993,6 +993,9 @@ CMakeFiles/Netflix.dir/mainwindow.cpp.o: \
   /Users/timoteo/Qt/6.11.1/macos/lib/QtGui.framework/Headers/qcursor.h \
   /Users/timoteo/Qt/6.11.1/macos/lib/QtGui.framework/Headers/qbitmap.h \
   /Users/timoteo/Qt/6.11.1/macos/lib/QtWidgets.framework/Headers/qtabwidget.h \
+  /Users/timoteo/Materias/Tec\ de\ Monterrey/2do\ Semestre/Programacion\ Orientada\ a\ Objetos/ProyectoFinal/Netflix/loginwindow.h \
+  /Users/timoteo/Qt/6.11.1/macos/lib/QtWidgets.framework/Headers/QWidget \
+  /Users/timoteo/Materias/Tec\ de\ Monterrey/2do\ Semestre/Programacion\ Orientada\ a\ Objetos/ProyectoFinal/Netflix/signupwindow.h \
   /Users/timoteo/Materias/Tec\ de\ Monterrey/2do\ Semestre/Programacion\ Orientada\ a\ Objetos/ProyectoFinal/Netflix/build/Qt_6_11_1_for_macOS-Debug/Netflix_autogen/include/./ui_mainwindow.h \
   /Users/timoteo/Qt/6.11.1/macos/lib/QtCore.framework/Headers/QVariant \
   /Users/timoteo/Qt/6.11.1/macos/lib/QtWidgets.framework/Headers/QApplication \
@@ -1009,27 +1012,11 @@ CMakeFiles/Netflix.dir/mainwindow.cpp.o: \
   /Users/timoteo/Qt/6.11.1/macos/lib/QtGui.framework/Headers/qinputmethod.h \
   /Users/timoteo/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qlocale.h \
   /Users/timoteo/Qt/6.11.1/macos/lib/QtGui.framework/Headers/qguiapplication_platform.h \
-  /Users/timoteo/Qt/6.11.1/macos/lib/QtWidgets.framework/Headers/QHBoxLayout \
+  /Users/timoteo/Qt/6.11.1/macos/lib/QtWidgets.framework/Headers/QStackedWidget \
+  /Users/timoteo/Qt/6.11.1/macos/lib/QtWidgets.framework/Headers/qstackedwidget.h \
+  /Users/timoteo/Qt/6.11.1/macos/lib/QtWidgets.framework/Headers/qframe.h \
+  /Users/timoteo/Qt/6.11.1/macos/lib/QtWidgets.framework/Headers/QVBoxLayout \
   /Users/timoteo/Qt/6.11.1/macos/lib/QtWidgets.framework/Headers/qboxlayout.h \
   /Users/timoteo/Qt/6.11.1/macos/lib/QtWidgets.framework/Headers/qlayout.h \
   /Users/timoteo/Qt/6.11.1/macos/lib/QtWidgets.framework/Headers/qlayoutitem.h \
-  /Users/timoteo/Qt/6.11.1/macos/lib/QtWidgets.framework/Headers/qgridlayout.h \
-  /Users/timoteo/Qt/6.11.1/macos/lib/QtWidgets.framework/Headers/QLabel \
-  /Users/timoteo/Qt/6.11.1/macos/lib/QtWidgets.framework/Headers/qlabel.h \
-  /Users/timoteo/Qt/6.11.1/macos/lib/QtWidgets.framework/Headers/qframe.h \
-  /Users/timoteo/Qt/6.11.1/macos/lib/QtGui.framework/Headers/qpicture.h \
-  /Users/timoteo/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qiodevice.h \
-  /Users/timoteo/Qt/6.11.1/macos/lib/QtGui.framework/Headers/qtextdocument.h \
-  /Users/timoteo/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qurl.h \
-  /Users/timoteo/Qt/6.11.1/macos/lib/QtWidgets.framework/Headers/QLineEdit \
-  /Users/timoteo/Qt/6.11.1/macos/lib/QtWidgets.framework/Headers/qlineedit.h \
-  /Users/timoteo/Qt/6.11.1/macos/lib/QtGui.framework/Headers/qtextcursor.h \
-  /Users/timoteo/Qt/6.11.1/macos/lib/QtGui.framework/Headers/qtextformat.h \
-  /Users/timoteo/Qt/6.11.1/macos/lib/QtGui.framework/Headers/qpen.h \
-  /Users/timoteo/Qt/6.11.1/macos/lib/QtGui.framework/Headers/qtextoption.h \
-  /Users/timoteo/Qt/6.11.1/macos/lib/QtWidgets.framework/Headers/QPushButton \
-  /Users/timoteo/Qt/6.11.1/macos/lib/QtWidgets.framework/Headers/qpushbutton.h \
-  /Users/timoteo/Qt/6.11.1/macos/lib/QtWidgets.framework/Headers/qabstractbutton.h \
-  /Users/timoteo/Qt/6.11.1/macos/lib/QtWidgets.framework/Headers/QSpacerItem \
-  /Users/timoteo/Qt/6.11.1/macos/lib/QtWidgets.framework/Headers/QVBoxLayout \
-  /Users/timoteo/Qt/6.11.1/macos/lib/QtWidgets.framework/Headers/QWidget
+  /Users/timoteo/Qt/6.11.1/macos/lib/QtWidgets.framework/Headers/qgridlayout.h

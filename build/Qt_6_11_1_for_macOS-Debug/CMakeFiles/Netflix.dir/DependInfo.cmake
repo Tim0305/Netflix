@@ -10,8 +10,10 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "" "Netflix_autogen/timestamp" "custom" "Netflix_autogen/deps"
   "/Users/timoteo/Materias/Tec de Monterrey/2do Semestre/Programacion Orientada a Objetos/ProyectoFinal/Netflix/build/Qt_6_11_1_for_macOS-Debug/Netflix_autogen/mocs_compilation.cpp" "CMakeFiles/Netflix.dir/Netflix_autogen/mocs_compilation.cpp.o" "gcc" "CMakeFiles/Netflix.dir/Netflix_autogen/mocs_compilation.cpp.o.d"
+  "/Users/timoteo/Materias/Tec de Monterrey/2do Semestre/Programacion Orientada a Objetos/ProyectoFinal/Netflix/loginwindow.cpp" "CMakeFiles/Netflix.dir/loginwindow.cpp.o" "gcc" "CMakeFiles/Netflix.dir/loginwindow.cpp.o.d"
   "/Users/timoteo/Materias/Tec de Monterrey/2do Semestre/Programacion Orientada a Objetos/ProyectoFinal/Netflix/main.cpp" "CMakeFiles/Netflix.dir/main.cpp.o" "gcc" "CMakeFiles/Netflix.dir/main.cpp.o.d"
   "/Users/timoteo/Materias/Tec de Monterrey/2do Semestre/Programacion Orientada a Objetos/ProyectoFinal/Netflix/mainwindow.cpp" "CMakeFiles/Netflix.dir/mainwindow.cpp.o" "gcc" "CMakeFiles/Netflix.dir/mainwindow.cpp.o.d"
+  "/Users/timoteo/Materias/Tec de Monterrey/2do Semestre/Programacion Orientada a Objetos/ProyectoFinal/Netflix/signupwindow.cpp" "CMakeFiles/Netflix.dir/signupwindow.cpp.o" "gcc" "CMakeFiles/Netflix.dir/signupwindow.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

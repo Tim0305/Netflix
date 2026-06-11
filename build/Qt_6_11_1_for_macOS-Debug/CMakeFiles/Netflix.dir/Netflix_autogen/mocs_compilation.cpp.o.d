@@ -1,9 +1,9 @@
 CMakeFiles/Netflix.dir/Netflix_autogen/mocs_compilation.cpp.o: \
   /Users/timoteo/Materias/Tec\ de\ Monterrey/2do\ Semestre/Programacion\ Orientada\ a\ Objetos/ProyectoFinal/Netflix/build/Qt_6_11_1_for_macOS-Debug/Netflix_autogen/mocs_compilation.cpp \
-  /Users/timoteo/Materias/Tec\ de\ Monterrey/2do\ Semestre/Programacion\ Orientada\ a\ Objetos/ProyectoFinal/Netflix/build/Qt_6_11_1_for_macOS-Debug/Netflix_autogen/EWIEGA46WW/moc_mainwindow.cpp \
-  /Users/timoteo/Materias/Tec\ de\ Monterrey/2do\ Semestre/Programacion\ Orientada\ a\ Objetos/ProyectoFinal/Netflix/build/Qt_6_11_1_for_macOS-Debug/Netflix_autogen/EWIEGA46WW/../../../../mainwindow.h \
-  /Users/timoteo/Qt/6.11.1/macos/lib/QtWidgets.framework/Headers/QMainWindow \
-  /Users/timoteo/Qt/6.11.1/macos/lib/QtWidgets.framework/Headers/qmainwindow.h \
+  /Users/timoteo/Materias/Tec\ de\ Monterrey/2do\ Semestre/Programacion\ Orientada\ a\ Objetos/ProyectoFinal/Netflix/build/Qt_6_11_1_for_macOS-Debug/Netflix_autogen/EWIEGA46WW/moc_loginwindow.cpp \
+  /Users/timoteo/Materias/Tec\ de\ Monterrey/2do\ Semestre/Programacion\ Orientada\ a\ Objetos/ProyectoFinal/Netflix/build/Qt_6_11_1_for_macOS-Debug/Netflix_autogen/EWIEGA46WW/../../../../loginwindow.h \
+  /Users/timoteo/Qt/6.11.1/macos/lib/QtWidgets.framework/Headers/QWidget \
+  /Users/timoteo/Qt/6.11.1/macos/lib/QtWidgets.framework/Headers/qwidget.h \
   /Users/timoteo/Qt/6.11.1/macos/lib/QtWidgets.framework/Headers/qtwidgetsglobal.h \
   /Users/timoteo/Qt/6.11.1/macos/lib/QtGui.framework/Headers/qtguiglobal.h \
   /Users/timoteo/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qglobal.h \
@@ -715,7 +715,6 @@ CMakeFiles/Netflix.dir/Netflix_autogen/mocs_compilation.cpp.o: \
   /Users/timoteo/Qt/6.11.1/macos/lib/QtGui.framework/Headers/qtguiexports.h \
   /Users/timoteo/Qt/6.11.1/macos/lib/QtWidgets.framework/Headers/qtwidgets-config.h \
   /Users/timoteo/Qt/6.11.1/macos/lib/QtWidgets.framework/Headers/qtwidgetsexports.h \
-  /Users/timoteo/Qt/6.11.1/macos/lib/QtWidgets.framework/Headers/qwidget.h \
   /Users/timoteo/Qt/6.11.1/macos/lib/QtGui.framework/Headers/qwindowdefs.h \
   /Users/timoteo/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qobjectdefs.h \
   /Users/timoteo/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qnamespace.h \
@@ -993,7 +992,13 @@ CMakeFiles/Netflix.dir/Netflix_autogen/mocs_compilation.cpp.o: \
   /Users/timoteo/Qt/6.11.1/macos/lib/QtWidgets.framework/Headers/qsizepolicy.h \
   /Users/timoteo/Qt/6.11.1/macos/lib/QtGui.framework/Headers/qcursor.h \
   /Users/timoteo/Qt/6.11.1/macos/lib/QtGui.framework/Headers/qbitmap.h \
-  /Users/timoteo/Qt/6.11.1/macos/lib/QtWidgets.framework/Headers/qtabwidget.h \
   /Users/timoteo/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qtmochelpers.h \
   /Users/timoteo/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qtmocconstants.h \
-  /Users/timoteo/Qt/6.11.1/macos/lib/QtCore.framework/Headers/q20algorithm.h
+  /Users/timoteo/Qt/6.11.1/macos/lib/QtCore.framework/Headers/q20algorithm.h \
+  /Users/timoteo/Materias/Tec\ de\ Monterrey/2do\ Semestre/Programacion\ Orientada\ a\ Objetos/ProyectoFinal/Netflix/build/Qt_6_11_1_for_macOS-Debug/Netflix_autogen/EWIEGA46WW/moc_mainwindow.cpp \
+  /Users/timoteo/Materias/Tec\ de\ Monterrey/2do\ Semestre/Programacion\ Orientada\ a\ Objetos/ProyectoFinal/Netflix/build/Qt_6_11_1_for_macOS-Debug/Netflix_autogen/EWIEGA46WW/../../../../mainwindow.h \
+  /Users/timoteo/Qt/6.11.1/macos/lib/QtWidgets.framework/Headers/QMainWindow \
+  /Users/timoteo/Qt/6.11.1/macos/lib/QtWidgets.framework/Headers/qmainwindow.h \
+  /Users/timoteo/Qt/6.11.1/macos/lib/QtWidgets.framework/Headers/qtabwidget.h \
+  /Users/timoteo/Materias/Tec\ de\ Monterrey/2do\ Semestre/Programacion\ Orientada\ a\ Objetos/ProyectoFinal/Netflix/build/Qt_6_11_1_for_macOS-Debug/Netflix_autogen/EWIEGA46WW/../../../../signupwindow.h \
+  /Users/timoteo/Materias/Tec\ de\ Monterrey/2do\ Semestre/Programacion\ Orientada\ a\ Objetos/ProyectoFinal/Netflix/build/Qt_6_11_1_for_macOS-Debug/Netflix_autogen/EWIEGA46WW/moc_signupwindow.cpp

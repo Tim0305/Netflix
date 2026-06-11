@@ -750,6 +750,8 @@
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/limits.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/ptrcheck.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/stdarg.h \
+  /Users/timoteo/Materias/Tec\ de\ Monterrey/2do\ Semestre/Programacion\ Orientada\ a\ Objetos/ProyectoFinal/Netflix/loginwindow.h \
+  /Users/timoteo/Materias/Tec\ de\ Monterrey/2do\ Semestre/Programacion\ Orientada\ a\ Objetos/ProyectoFinal/Netflix/signupwindow.h \
   /Users/timoteo/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/q17memory.h \
   /Users/timoteo/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/q20bit.h \
   /Users/timoteo/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/q20functional.h \
@@ -904,6 +906,7 @@
   /Users/timoteo/Qt/6.11.1/macos/lib/QtGui.framework/Versions/A/Headers/qtransform.h \
   /Users/timoteo/Qt/6.11.1/macos/lib/QtGui.framework/Versions/A/Headers/qwindowdefs.h \
   /Users/timoteo/Qt/6.11.1/macos/lib/QtWidgets.framework/Versions/A/Headers/QMainWindow \
+  /Users/timoteo/Qt/6.11.1/macos/lib/QtWidgets.framework/Versions/A/Headers/QWidget \
   /Users/timoteo/Qt/6.11.1/macos/lib/QtWidgets.framework/Versions/A/Headers/qmainwindow.h \
   /Users/timoteo/Qt/6.11.1/macos/lib/QtWidgets.framework/Versions/A/Headers/qsizepolicy.h \
   /Users/timoteo/Qt/6.11.1/macos/lib/QtWidgets.framework/Versions/A/Headers/qtabwidget.h \
