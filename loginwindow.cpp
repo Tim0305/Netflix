@@ -1,6 +1,7 @@
 #include "loginwindow.h"
 #include "ui_loginwindow.h"
 #include <iostream>
+#include <QMessageBox>
 
 using namespace std;
 
@@ -19,11 +20,19 @@ LoginWindow::~LoginWindow()
 void LoginWindow::on_loginButton_clicked()
 {
     // Iniciar sesion
-    QString user = ui->userEdit->text();
-    QString password = ui->passwordEdit->text();
+    string user = ui->userEdit->text().toStdString();
+    string password = ui->passwordEdit->text().toStdString();
 
-    cout << "User: " << user.toStdString() << endl;
-    cout << "Password: " << password.toStdString() << endl;
+    // Validaciones
+    if (user.empty() || password.empty())
+        QMessageBox::critical(
+            this,
+            "Error",
+            "Usuario o contraseña inválidos");
+    else {
+        cout << "User: " << user << endl;
+        cout << "Password: " << password << endl;
+    }
 }
 
 void LoginWindow::on_signupButton_clicked()

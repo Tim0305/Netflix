@@ -1045,4 +1045,8 @@ CMakeFiles/Netflix.dir/signupwindow.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/stack \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__fwd/stack.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/print \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk/usr/include/unistd.h
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk/usr/include/unistd.h \
+  /Users/timoteo/Qt/6.11.1/macos/lib/QtWidgets.framework/Headers/QMessageBox \
+  /Users/timoteo/Qt/6.11.1/macos/lib/QtWidgets.framework/Headers/qmessagebox.h \
+  /Users/timoteo/Qt/6.11.1/macos/lib/QtWidgets.framework/Headers/qdialog.h \
+  /Users/timoteo/Qt/6.11.1/macos/lib/QtWidgets.framework/Headers/qdialogbuttonbox.h

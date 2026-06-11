@@ -1,6 +1,7 @@
 #include "signupwindow.h"
 #include "ui_signupwindow.h"
 #include <iostream>
+#include <QMessageBox>
 
 using namespace std;
 
@@ -25,15 +26,22 @@ void SignUpWindow::on_returnButton_clicked()
 
 void SignUpWindow::on_signinButton_clicked()
 {
-    // Registrar un nuevo usuario
-    QString user = ui->userEdit->text();
-    QString password = ui->passwordEdit->text();
+    // Iniciar sesion
+    string user = ui->userEdit->text().toStdString();
+    string password = ui->passwordEdit->text().toStdString();
 
-    cout << "User: " << user.toStdString() << endl;
-    cout << "Password: " << password.toStdString() << endl;
-
-    // Regresar al login page
-    emit return2LoginWindow();
+    // Validaciones
+    if (user.empty() || password.empty())
+        QMessageBox::critical(
+            this,
+            "Error",
+            "Usuario o contraseña inválidos");
+    else {
+        cout << "User: " << user << endl;
+        cout << "Password: " << password << endl;
+        // Regresar al login page
+        emit return2LoginWindow();
+    }
 }
 
 void SignUpWindow::reset() {
