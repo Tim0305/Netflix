@@ -3,6 +3,7 @@
 #include <array>
 #include <memory>
 #include <opencv2/opencv.hpp>
+#include <sstream>
 
 using namespace cv;
 
@@ -97,9 +98,17 @@ bool Contenido::operator<=(double valor) { return getCalificacion() <= valor; }
 
 double Contenido::getCalificacion() { return calificacion; }
 
-bool Contenido::operator>(double valor)
-{
-    return getCalificacion() > valor;
+string Contenido::toString() {
+    stringstream ss;
+    ss << "===============================" << endl;
+    ss << "ID: " << getId() << endl;
+    ss << "Nombre: " << getNombre() << endl;
+    ss << "Descripcion: " << getDescripcion() << endl;
+    ss << "Duracion: " << getDuracion() << " minutos" << endl;
+    ss << "Calificacion: " << getCalificacion() << endl;
+    ss << "Genero: " << getGenero() << endl;
+    ss << "===============================" << endl;
+    return ss.str();
 }
 
 void Contenido::reproducir() const {

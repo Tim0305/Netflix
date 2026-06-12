@@ -30,6 +30,8 @@ void opcionEliminarContenido(vector<Contenido *> &contenidos);
 void opcionCalificarContenido(vector<Contenido *> &contenidos);
 vector<Contenido *> cargarContenidos(string filepath);
 void guardarDatos(string path, const vector<Contenido *> &lista);
+void opcionReproducirContenido(vector<Contenido *> contenidos);
+
 
 int main() {
   vector<Contenido *> contenidos; // El catálogo inicia vacío
@@ -47,14 +49,15 @@ int main() {
       cout << "[3] Modificar contenido" << endl;
       cout << "[4] Eliminar contenido" << endl;
       cout << "[5] Calificar contenido" << endl;
+      cout << "[6] Reproducir contenido" << endl;
       cout << "[0] Salir" << endl;
       cout << "> ";
       opcion = leerEntero();
 
-      if (opcion < 0 || opcion > 5) {
+      if (opcion < 0 || opcion > 6) {
         cout << endl << "Opcion incorrecta. Intenta de nuevo." << endl;
       }
-    } while (opcion < 0 || opcion > 5);
+    } while (opcion < 0 || opcion > 6);
 
     switch (opcion) {
     case 1: {
@@ -75,6 +78,10 @@ int main() {
     }
     case 5: {
       opcionCalificarContenido(contenidos);
+      break;
+    }
+    case 6: {
+      opcionReproducirContenido(contenidos);
       break;
     }
     case 0: {
@@ -873,4 +880,75 @@ void guardarDatos(string path, const vector<Contenido *> &lista) {
 
   archivo.close();
   cout << "Datos guardados con exito en: " << path << endl;
+}
+
+void opcionReproducirContenido(vector<Contenido *> contenidos) {
+  char subOpcion;
+  do {
+    cout << "\n--- REPRODUCIR CONTENIDO ---" << endl;
+    cout << "  [a] Reproducir Pelicula" << endl;
+    cout << "  [b] Reproducir Episodio de una Serie" << endl;
+    cout << "  [c] Regresar" << endl;
+    cout << "  > ";
+    subOpcion = leerChar();
+    subOpcion = tolower(subOpcion);
+
+    if (subOpcion < 'a' || subOpcion > 'c')
+      cout << endl << "Opcion incorrecta. Intenta de nuevo." << endl;
+  } while (subOpcion < 'a' || subOpcion > 'c');
+
+  switch (subOpcion) {
+    case 'a': {
+      mostrarPeliculas(contenidos);
+      cout << endl << "ID de la Pelicula a reproducir: ";
+      int id = leerEntero();
+      Pelicula *p = buscarPelicula(id, contenidos);
+      
+      if (!p) {
+        cout << endl << "Pelicula no encontrada." << endl;
+        return;
+      }
+      
+      p->reproducir();
+      break;
+    }
+    case 'b': {
+      mostrarSeries(contenidos);
+      cout << endl << "ID de la Serie: ";
+      int idSerie = leerEntero();
+      Serie *s = buscarSerie(idSerie, contenidos);
+      
+      if (!s) {
+        cout << endl << "Serie no encontrada." << endl;
+        return;
+      }
+
+      cout << endl << "Episodios disponibles:" << endl;
+      for (Episodio *ep : s->getEpisodios()) {
+        cout << "  ID: " << ep->getId() << " - " << ep->getNombre() << endl;
+      }
+      
+      cout << "ID del Episodio a reproducir: ";
+      int idEpisodio = leerEntero();
+
+      Episodio *targetEp = nullptr;
+      for (Episodio *ep : s->getEpisodios()) {
+        if (ep->getId() == idEpisodio) {
+          targetEp = ep;
+          break;
+        }
+      }
+
+      if (!targetEp) {
+        cout << endl << "Episodio no encontrado." << endl;
+        return;
+      }
+
+      targetEp->reproducir();
+      break;
+    }
+    case 'c': {
+      return;
+    }
+  }
 }

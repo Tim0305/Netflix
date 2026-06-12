@@ -54,6 +54,7 @@ public:
   bool operator<(double valor);
   bool operator<=(double valor);
   virtual string toString();
+  void reproducir() const;
 };
 
 #endif
