@@ -1,0 +1,62 @@
+[
+  {
+    "file": "main.cpp",
+    "arguments": [
+      "/usr/bin/g++",
+      "-Wall",
+      "-Wextra",
+      "-std=c++17",
+      "-c",
+      "main.cpp",
+      "-o",
+      "main.o"
+    ],
+    "directory": "/Users/timoteo/Materias/Tec de Monterrey/2do Semestre/Programacion Orientada a Objetos/ProyectoFinal/NetflixTerminal",
+    "output": "main.o"
+  },
+  {
+    "file": "Pelicula.cpp",
+    "arguments": [
+      "/usr/bin/g++",
+      "-Wall",
+      "-Wextra",
+      "-std=c++17",
+      "-c",
+      "Pelicula.cpp",
+      "-o",
+      "Pelicula.o"
+    ],
+    "directory": "/Users/timoteo/Materias/Tec de Monterrey/2do Semestre/Programacion Orientada a Objetos/ProyectoFinal/NetflixTerminal",
+    "output": "Pelicula.o"
+  },
+  {
+    "file": "Serie.cpp",
+    "arguments": [
+      "/usr/bin/g++",
+      "-Wall",
+      "-Wextra",
+      "-std=c++17",
+      "-c",
+      "Serie.cpp",
+      "-o",
+      "Serie.o"
+    ],
+    "directory": "/Users/timoteo/Materias/Tec de Monterrey/2do Semestre/Programacion Orientada a Objetos/ProyectoFinal/NetflixTerminal",
+    "output": "Serie.o"
+  },
+  {
+    "file": "Usuario.cpp",
+    "arguments": [
+      "/usr/bin/g++",
+      "-Wall",
+      "-Wextra",
+      "-std=c++17",
+      "-c",
+      "Usuario.cpp",
+      "-o",
+      "Usuario.o"
+    ],
+    "directory": "/Users/timoteo/Materias/Tec de Monterrey/2do Semestre/Programacion Orientada a Objetos/ProyectoFinal/NetflixTerminal",
+    "output": "Usuario.o"
+  }
+]

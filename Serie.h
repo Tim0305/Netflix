@@ -11,30 +11,22 @@ using namespace std;
 class Serie : public Contenido {
 
 private:
-
-    vector<Episodio> episodios;
+  vector<Episodio *> episodios;
 
 public:
+  Serie();
 
-    Serie();
+  Serie(int id, string nombre, string descripcion, int duracion, string genero,
+        string portada);
 
-    Serie(
-        int id,
-        string nombre,
-        string descripcion,
-        int duracion,
-        string genero,
-        string portada,
-        string video
-    );
-
-    ~Serie();
-
-    void addEpisodio(Episodio episodio);
-
-    vector<Episodio> getEpisodios() const;
-
-    double operator+();
+  ~Serie();
+  void addEpisodio(Episodio* episodio);
+  int getTemporadas();
+  int getTotalEpisodios();
+  double getCalificacion() override;
+  void addCalificacion(double valor) override;
+  vector<Episodio *> getEpisodios() const;
+  string toString() override;
 };
 
 #endif
