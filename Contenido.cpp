@@ -1,5 +1,26 @@
 #include "Contenido.h"
-#include <sstream>
+#include <iostream>
+#include <array>
+#include <memory>
+#include <opencv2/opencv.hpp>
+
+using namespace cv;
+
+namespace {
+    string exec(const char* cmd) {
+        array<char, 128> buffer;
+        string result;
+        unique_ptr<FILE, decltype(&pclose)> pipe(popen(cmd, "r"), pclose);
+        if (!pipe) {
+            throw runtime_error("popen() falló!");
+        }
+        while (fgets(buffer.data(), buffer.size(), pipe.get()) != nullptr) {
+            result += buffer.data();
+        }
+        result.erase(result.find_last_not_of(" \n\r\t") + 1);
+        return result;
+    }
+}
 
 Contenido::Contenido() {
   id = 0;
@@ -76,15 +97,42 @@ bool Contenido::operator<=(double valor) { return getCalificacion() <= valor; }
 
 double Contenido::getCalificacion() { return calificacion; }
 
-string Contenido::toString() {
-  stringstream ss;
-  ss << "===============================" << endl;
-  ss << "ID: " << getId() << endl;
-  ss << "Nombre: " << getNombre() << endl;
-  ss << "Descripcion: " << getDescripcion() << endl;
-  ss << "Duracion: " << getDuracion() << " minutos" << endl;
-  ss << "Calificacion: " << getCalificacion() << endl;
-  ss << "Genero: " << getGenero() << endl;
-  ss << "===============================" << endl;
-  return ss.str();
+bool Contenido::operator>(double valor)
+{
+    return getCalificacion() > valor;
+}
+
+void Contenido::reproducir() const {
+    if (this->video.empty()) {
+        cout << "Error: No hay un enlace de video asignado a '" << this->nombre << "'." << endl;
+        return;
+    }
+    cout << "Cargando video de: " << this->nombre << "..." << endl;
+    string cmd = "yt-dlp -f \"best[height<=720]\" --get-url \"" + this->video + "\"";
+    string direct_url = exec(cmd.c_str());
+    if (direct_url.empty()) {
+        cerr << "Error: No se pudo resolver la URL del video de YouTube." << endl;
+        return;
+    }
+    VideoCapture cap(direct_url);
+    if (!cap.isOpened()) {
+        cerr << "Error: OpenCV no pudo abrir el stream de video." << endl;
+        return;
+    }
+    string window_name = "Reproduciendo: " + this->nombre;
+    namedWindow(window_name, WINDOW_NORMAL);
+    resizeWindow(window_name, 854, 480);
+    Mat frame;
+    cout << "Reproduciendo... (Presiona 'q' o 'ESC' en la ventana para cerrarla)" << endl;
+    while (true) {
+        cap >> frame;
+        if (frame.empty()) break;
+        imshow(window_name, frame);
+        char key = (char)waitKey(30);
+        if (key == 'q' || key == 27) {
+            break;
+        }
+    }
+    destroyWindow(window_name);
+    cap.release();
 }
