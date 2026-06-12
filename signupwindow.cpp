@@ -1,5 +1,6 @@
 #include "signupwindow.h"
 #include "ui_signupwindow.h"
+#include "appdb.h"         
 #include <iostream>
 #include <QMessageBox>
 
@@ -36,10 +37,18 @@ void SignUpWindow::on_signinButton_clicked()
             this,
             "Error",
             "Usuario o contraseña inválidos");
+    else if (appDb().buscarUsuarioPorNombre(user)) {
+        QMessageBox::critical(
+            this,
+            "Error",
+            "El usuario ya existe");
+    }
     else {
-        cout << "User: " << user << endl;
-        cout << "Password: " << password << endl;
-        // Regresar al login page
+        int id = appDb().registrarUsuario(user, password, "cliente");
+        QMessageBox::information(
+            this,
+            "Registro exitoso",
+            QString("Usuario registrado con id %1").arg(id));
         emit return2LoginWindow();
     }
 }
