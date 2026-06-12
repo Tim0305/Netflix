@@ -31,7 +31,7 @@ void opcionCalificarContenido(vector<Contenido *> &contenidos);
 vector<Contenido *> cargarContenidos(string filepath);
 void guardarDatos(string path, const vector<Contenido *> &lista);
 void opcionReproducirContenido(vector<Contenido *> contenidos);
-
+void opcionVerPortada(vector<Contenido *> contenidos);
 bool eliminarContenido(Contenido *contenido, vector<Contenido *> &contenidos);
 
 int main() {
@@ -51,14 +51,15 @@ int main() {
       cout << "[4] Eliminar contenido" << endl;
       cout << "[5] Calificar contenido" << endl;
       cout << "[6] Reproducir contenido" << endl;
+      cout << "[7] Ver portada" << endl;
       cout << "[0] Salir" << endl;
       cout << "> ";
       opcion = leerEntero();
 
-      if (opcion < 0 || opcion > 6) {
+      if (opcion < 0 || opcion > 7) {
         cout << endl << "Opcion incorrecta. Intenta de nuevo." << endl;
       }
-    } while (opcion < 0 || opcion > 6);
+    } while (opcion < 0 || opcion > 7);
 
     switch (opcion) {
     case 1: {
@@ -83,6 +84,10 @@ int main() {
     }
     case 6: {
       opcionReproducirContenido(contenidos);
+      break;
+    }
+    case 7: {
+      opcionVerPortada(contenidos);
       break;
     }
     case 0: {
@@ -947,4 +952,33 @@ bool eliminarContenido(Contenido *contenido, vector<Contenido *> &contenidos) {
     }
   }
   return false;
+}
+
+void opcionVerPortada(vector<Contenido *> contenidos) {
+  char subOpcion;
+  do {
+    cout << "\n--- VER PORTADA ---" << endl;
+    cout << "  [a] Pelicula" << endl;
+    cout << "  [b] Serie" << endl;
+    cout << "  [c] Regresar" << endl;
+    cout << "  > ";
+    subOpcion = tolower(leerChar());
+    if (subOpcion < 'a' || subOpcion > 'c') cout << "Opcion incorrecta.\n";
+  } while (subOpcion < 'a' || subOpcion > 'c');
+
+  if (subOpcion == 'a') {
+    mostrarPeliculas(contenidos);
+    cout << "\nID de la Pelicula: ";
+    int id = leerEntero();
+    Pelicula* p = buscarPelicula(id, contenidos);
+    if (p) p->mostrarPortada();
+    else cout << "Pelicula no encontrada.\n";
+  } else if (subOpcion == 'b') {
+    mostrarSeries(contenidos);
+    cout << "\nID de la Serie: ";
+    int id = leerEntero();
+    Serie* s = buscarSerie(id, contenidos);
+    if (s) s->mostrarPortada();
+    else cout << "Serie no encontrada.\n";
+  }
 }
