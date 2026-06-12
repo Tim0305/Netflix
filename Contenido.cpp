@@ -1,48 +1,130 @@
 #include "Contenido.h"
 
-Contenido::Contenido(){
-	id = 0;
-	nombre = "";
-	duracion = 0;
-	genero = "";
-	descripcion = "";
-	portada = "";
-	src = "";
-	calificacion = 0;
-	numcalificaciones = 0;
+Contenido::Contenido() {
+
+    id = 0;
+    nombre = "";
+    descripcion = "";
+    duracion = 0;
+
+    calificacion = 0;
+    numeroCalificaciones = 0;
+
+    genero = "";
+    portada = "";
+    video = "";
 }
 
 Contenido::Contenido(
-	int id,
-	string nombre,
-	int duracion,
-	string genero)
+    int id,
+    string nombre,
+    string descripcion,
+    int duracion,
+    string genero,
+    string portada,
+    string video)
 {
-	this->id = id;
-	this->nombre = nombre;
-	this->duracion = duracion;
-	this->genero = genero;
+    this->id = id;
+    this->nombre = nombre;
+    this->descripcion = descripcion;
+    this->duracion = duracion;
 
-	descripcion = "";
-	portada = "";
-	src = "";
+    this->genero = genero;
+    this->portada = portada;
+    this->video = video;
 
-	calificacion = 0;
-	numcalificaciones = 0;
+    calificacion = 0;
+    numeroCalificaciones = 0;
 }
 
-double Contenido::getCalificacion(){
-	return calificacion;
+Contenido::~Contenido() {
 }
 
-string Contenido::getGenero(){
-	return genero;
+// Getters
+
+int Contenido::getId() const {
+    return id;
 }
 
-string Contenido::getNombre(){
-	return nombre;
+string Contenido::getNombre() const {
+    return nombre;
 }
 
-void Contenido::setCalificacion(double calificacion){
-	this->calificacion = calificacion;
+string Contenido::getDescripcion() const {
+    return descripcion;
+}
+
+int Contenido::getDuracion() const {
+    return duracion;
+}
+
+string Contenido::getGenero() const {
+    return genero;
+}
+
+string Contenido::getPortada() const {
+    return portada;
+}
+
+string Contenido::getVideo() const {
+    return video;
+}
+
+// Setters
+
+void Contenido::setId(int id) {
+    this->id = id;
+}
+
+void Contenido::setNombre(string nombre) {
+    this->nombre = nombre;
+}
+
+void Contenido::setDescripcion(string descripcion) {
+    this->descripcion = descripcion;
+}
+
+void Contenido::setDuracion(int duracion) {
+    this->duracion = duracion;
+}
+
+void Contenido::setDuracion(
+    int horas,
+    int minutos,
+    int segundos)
+{
+    duracion =
+        horas * 3600 +
+        minutos * 60 +
+        segundos;
+}
+
+void Contenido::setGenero(string genero) {
+    this->genero = genero;
+}
+
+void Contenido::setPortada(string portada) {
+    this->portada = portada;
+}
+
+void Contenido::setVideo(string video) {
+    this->video = video;
+}
+
+void Contenido::addCalificacion(double valor) {
+
+    calificacion =
+    (
+        calificacion * numeroCalificaciones
+        + valor
+    )
+    /
+    (numeroCalificaciones + 1);
+
+    numeroCalificaciones++;
+}
+
+bool Contenido::operator>(double valor) {
+
+    return getCalificacion() > valor;
 }

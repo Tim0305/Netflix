@@ -1,49 +1,65 @@
 #include "Serie.h"
 
-Serie::Serie() : Contenido()
+Serie::Serie()
+: Contenido()
 {
 }
 
 Serie::Serie(
-	int id,
-	string nombre,
-	int duracion,
-	string genero)
-	:
-	Contenido(
-		id,
-		nombre,
-		duracion,
-		genero)
+    int id,
+    string nombre,
+    string descripcion,
+    int duracion,
+    string genero,
+    string portada,
+    string video)
+:
+Contenido(
+    id,
+    nombre,
+    descripcion,
+    duracion,
+    genero,
+    portada,
+    video)
 {
 }
 
-void Serie::agregarTemporada(Temporada temporada){
-	temporadas.push_back(temporada);
+Serie::~Serie()
+{
 }
 
-double Serie::getCalificacion(){
-
-	if(temporadas.size() == 0){
-		return 0;
-	}
-
-	double suma = 0;
-
-	for(int i = 0; i < temporadas.size(); i++){
-		suma += temporadas[i].getCalificacion();
-	}
-
-	return suma / temporadas.size();
+void Serie::addEpisodio(Episodio episodio)
+{
+    episodios.push_back(episodio);
 }
 
-void Serie::mostrar(){
+vector<Episodio> Serie::getEpisodios() const
+{
+    return episodios;
+}
 
-	cout << "----- SERIE -----" << endl;
-	cout << "ID: " << id << endl;
-	cout << "Nombre: " << nombre << endl;
-	cout << "Genero: " << genero << endl;
-	cout << "Duracion: " << duracion << endl;
-	cout << "Calificacion: " << getCalificacion() << endl;
-	cout << "Temporadas: " << temporadas.size() << endl;
+double Serie::calcularPromedio() const
+{
+    if (episodios.empty())
+        return 0;
+
+    double suma = 0;
+
+    for (const Episodio& ep : episodios)
+    {
+        suma += ep.getCalificacion();
+    }
+
+    return suma / episodios.size();
+}
+
+double Serie::operator+()
+{
+    return calcularPromedio();
+}
+
+double Serie::getCalificacion() const
+{
+    return calcularPromedio();
 }

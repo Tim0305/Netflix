@@ -1,29 +1,35 @@
 #include "Pelicula.h"
 
-Pelicula::Pelicula() : Contenido()
+Pelicula::Pelicula()
+: Contenido()
 {
 }
 
 Pelicula::Pelicula(
-	int id,
-	string nombre,
-	int duracion,
-	string genero)
-	:
-	Contenido(
-		id,
-		nombre,
-		duracion,
-		genero)
+    int id,
+    string nombre,
+    string descripcion,
+    int duracion,
+    string genero,
+    string portada,
+    string video)
+:
+Contenido(
+    id,
+    nombre,
+    descripcion,
+    duracion,
+    genero,
+    portada,
+    video)
 {
 }
 
-void Pelicula::mostrar(){
+Pelicula::~Pelicula()
+{
+}
 
-	cout << "----- PELICULA -----" << endl;
-	cout << "ID: " << id << endl;
-	cout << "Nombre: " << nombre << endl;
-	cout << "Genero: " << genero << endl;
-	cout << "Duracion: " << duracion << endl;
-	cout << "Calificacion: " << calificacion << endl;
+double Pelicula::getCalificacion() const {
+
+    return calificacion;
 }

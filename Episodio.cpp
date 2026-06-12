@@ -1,44 +1,48 @@
 #include "Episodio.h"
 
-Episodio::Episodio(){
-	id = 0;
-	titulo = "";
-	duracion = 0;
-	temporada = 0;
-	descripcion = "";
-	src = "";
-	calificacion = 0;
+Episodio::Episodio()
+: Contenido()
+{
+    temporada = 1;
 }
 
 Episodio::Episodio(
-	int id,
-	string titulo,
-	int duracion,
-	int temporada)
+    int id,
+    string nombre,
+    string descripcion,
+    int duracion,
+    string genero,
+    string portada,
+    string video,
+    int temporada)
+:
+Contenido(
+    id,
+    nombre,
+    descripcion,
+    duracion,
+    genero,
+    portada,
+    video)
 {
-	this->id = id;
-	this->titulo = titulo;
-	this->duracion = duracion;
-	this->temporada = temporada;
-
-	descripcion = "";
-	src = "";
-	calificacion = 0;
+    this->temporada = temporada;
 }
 
-double Episodio::getCalificacion(){
-	return calificacion;
+Episodio::~Episodio()
+{
 }
 
-void Episodio::setCalificacion(double calificacion){
-	this->calificacion = calificacion;
+int Episodio::getTemporada() const {
+
+    return temporada;
 }
 
-void Episodio::mostrar(){
+void Episodio::setTemporada(int temporada) {
 
-	cout << "ID: " << id << endl;
-	cout << "Titulo: " << titulo << endl;
-	cout << "Duracion: " << duracion << endl;
-	cout << "Temporada: " << temporada << endl;
-	cout << "Calificacion: " << calificacion << endl;
+    this->temporada = temporada;
+}
+
+double Episodio::getCalificacion() const {
+
+    return calificacion;
 }

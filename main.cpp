@@ -1,106 +1,187 @@
 #include <iostream>
+#include <vector>
 
 #include "Pelicula.h"
 #include "Serie.h"
-#include "Temporada.h"
 #include "Episodio.h"
-#include "Usuario.h"
 
 using namespace std;
 
-int main(){
+int main()
+{
+    cout << "===== CREANDO PELICULAS =====" << endl;
 
     Pelicula p1(
         1,
-        "Interstellar",
-        169,
-        "Ciencia Ficcion");
-
-    p1.setCalificacion(9.5);
+        "Avengers",
+        "Superheroes",
+        7200,
+        "Accion",
+        "portada1.jpg",
+        "avengers.mp4"
+    );
 
     Pelicula p2(
         2,
-        "Avatar",
-        162,
-        "Aventura");
+        "Titanic",
+        "Drama romantico",
+        10800,
+        "Drama",
+        "portada2.jpg",
+        "titanic.mp4"
+    );
 
-    p2.setCalificacion(8.8);
+    p1.addCalificacion(5);
+    p1.addCalificacion(4);
 
-    Episodio e1(
-        1,
-        "El Principio",
-        45,
-        1);
+    p2.addCalificacion(3);
+    p2.addCalificacion(4);
 
-    e1.setCalificacion(9.0);
+    cout << endl;
+    cout << p1.getNombre()
+         << " -> "
+         << p1.getCalificacion()
+         << endl;
 
-    Episodio e2(
-        2,
-        "La Decision",
-        50,
-        1);
-
-    e2.setCalificacion(8.5);
-
-    Episodio e3(
-        3,
-        "El Regreso",
-        48,
-        2);
-
-    e3.setCalificacion(9.5);
-
-    Temporada t1(1);
-
-    t1.agregarEpisodio(e1);
-    t1.agregarEpisodio(e2);
-
-    Temporada t2(2);
-
-    t2.agregarEpisodio(e3);
-
-
-    Serie s1(
-        3,
-        "Dark",
-        0,
-        "Drama");
-
-    s1.agregarTemporada(t1);
-    s1.agregarTemporada(t2);
-
-
-    Usuario u1(
-        1,
-        "Carlos",
-        "1234",
-        "Administrador");
-
-
-    cout << "USUARIO" << endl;
-    u1.mostrar();
+    cout << p2.getNombre()
+         << " -> "
+         << p2.getCalificacion()
+         << endl;
 
     cout << endl;
 
-
-    Contenido *catalogo[3];
-
-    catalogo[0] = &p1;
-    catalogo[1] = &p2;
-    catalogo[2] = &s1;
-
-    cout << "CATALOGO" << endl;
-
-    for(int i = 0; i < 3; i++){
-
-        catalogo[i]->mostrar();
-
-        cout << "Calificacion: "
-             << catalogo[i]->getCalificacion()
+    if (p1 > 4.0)
+    {
+        cout << p1.getNombre()
+             << " tiene calificacion mayor a 4"
              << endl;
+    }
 
-        cout << endl;
+    cout << endl;
+
+    cout << "===== CREANDO EPISODIOS =====" << endl;
+
+    Episodio ep1(
+        101,
+        "Piloto",
+        "Primer episodio",
+        3600,
+        "Drama",
+        "",
+        "",
+        1
+    );
+
+    Episodio ep2(
+        102,
+        "Capitulo 2",
+        "Segundo episodio",
+        3600,
+        "Drama",
+        "",
+        "",
+        1
+    );
+
+    Episodio ep3(
+        103,
+        "Capitulo 3",
+        "Tercer episodio",
+        3600,
+        "Drama",
+        "",
+        "",
+        1
+    );
+
+    ep1.addCalificacion(5);
+    ep2.addCalificacion(4);
+    ep3.addCalificacion(3);
+
+    cout << "Calificacion episodio 1: "
+         << ep1.getCalificacion()
+         << endl;
+
+    cout << "Calificacion episodio 2: "
+         << ep2.getCalificacion()
+         << endl;
+
+    cout << "Calificacion episodio 3: "
+         << ep3.getCalificacion()
+         << endl;
+
+    cout << endl;
+
+    cout << "===== CREANDO SERIE =====" << endl;
+
+    Serie serie1(
+        10,
+        "Breaking Bad",
+        "Serie famosa",
+        0,
+        "Drama",
+        "",
+        ""
+    );
+
+    serie1.addEpisodio(ep1);
+    serie1.addEpisodio(ep2);
+    serie1.addEpisodio(ep3);
+
+    cout << "Promedio usando operador + : "
+         << +serie1
+         << endl;
+
+    cout << "Promedio usando getCalificacion() : "
+         << serie1.getCalificacion()
+         << endl;
+
+    cout << endl;
+
+    cout << "===== POLIMORFISMO =====" << endl;
+
+    vector<Contenido*> catalogo;
+
+    catalogo.push_back(&p1);
+    catalogo.push_back(&p2);
+    catalogo.push_back(&serie1);
+
+    for (Contenido* contenido : catalogo)
+    {
+        cout
+        << contenido->getNombre()
+        << " -> "
+        << contenido->getCalificacion()
+        << endl;
+    }
+
+    cout << endl;
+
+    cout << "===== FILTRO > 4 =====" << endl;
+
+    for (Contenido* contenido : catalogo)
+    {
+        if (*contenido > 4.0)
+        {
+            cout
+            << contenido->getNombre()
+            << " cumple"
+            << endl;
+        }
     }
 
     return 0;
 }
+// =======
+// #include "mainwindow.h"
+
+// #include <QApplication>
+
+// int main(int argc, char *argv[])
+// {
+//     QApplication a(argc, argv);
+//     MainWindow w;
+//     w.show();
+//     return QApplication::exec();
+// }
+// >>>>>>> 8104912432534cf40b83ba81de74a153c021df3c
