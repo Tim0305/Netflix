@@ -145,3 +145,21 @@ void Contenido::reproducir() const {
     destroyWindow(window_name);
     cap.release();
 }
+
+void Contenido::mostrarPortada() const {
+    if (this->portada.empty()) {
+        cout << "Error: No hay portada asignada para '" << this->nombre << "'." << endl;
+        return;
+    }    
+    Mat img = imread(this->portada);
+    if (img.empty()) {
+        cout << "Error: No se encontro el archivo de imagen '" << this->portada << "' en tu carpeta." << endl;
+        return;
+    }
+    string window_name = "Portada: " + this->nombre;
+    namedWindow(window_name, WINDOW_NORMAL);
+    imshow(window_name, img);
+    cout << "Mostrando portada de " << this->nombre << "... (Presiona cualquier tecla para cerrar)" << endl;    
+    waitKey(0);
+    destroyWindow(window_name);
+}

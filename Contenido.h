@@ -55,6 +55,7 @@ public:
   bool operator<=(double valor);
   virtual string toString();
   void reproducir() const;
+  void mostrarPortada() const;
 };
 
 #endif

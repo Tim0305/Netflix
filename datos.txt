@@ -1,10 +1,10 @@
-P,1,Spider-Man: Across the Spider-Verse,Aventura en el multiverso aracnido,140,Ciencia Ficcion,spiderman.jpg,https://youtu.be/oBmazlyP220
+P,1,Spider-Man: Across the Spider-Verse,Aventura en el multiverso aracnido,140,Ciencia Ficcion,descarga.jpeg,https://youtu.be/oBmazlyP220
 P,2,The Truman Show,La vida de Truman es un reality show,103,Drama / Comedy,truman.jpg,https://youtu.be/dlnmQbPGuls
 P,3,Las Ventajas de ser invencible,Historia adolescente sobre la amistad,103,Drama,ventajas.jpg,https://youtu.be/zXWW4V7hcWc
 P,4,Wiplash,Un baterista llevado al limite,107,Drama,whiplash.jpg,https://youtu.be/7d_jQycdQGo
 P,5,La sociedad de los poetas muertos,Un profesor de literatura que inspira,129,Drama,poetas.jpg,https://youtu.be/ye4KFyWu2do
 P,6,Superman,El hombre de acero salva al mundo,130,Ciencia Ficcion,superman.jpg,https://youtu.be/Ox8ZLF6cGM0
-P,7,Guardianes de la Galaxy,Heroes espaciales muy peculiares,121,Ciencia Ficcion,guardianes.jpg,https://youtu.be/cbAfhBNQ2qU
 P,8,Chicuarotes,Dos jovenes buscando salir de la pobreza,96,Drama,chicuarotes.jpg,https://youtu.be/i_mfTvBqRcE
-P,9,Ready Player One,Competencia en un mundo de realidad virtual,140,Ciencia Ficcion,readyplayer.jpg,https://youtu.be/UeO9IyYHiqM
+P,9,Ready Player One,Competencia en un mundo de realidad virtual,140,Ciencia Ficcion,ready.jpeg,https://youtu.be/UeO9IyYHiqM
 P,10,Los Increibles,Una familia de superheroes sale del retiro,115,Accion,increibles.jpg,https://youtu.be/fLHiX2bb3Ws
+P,11,Prueba,lalalalala,180,Terror,a,a
