@@ -11,6 +11,7 @@ class Pelicula: public Contenido{
 		Pelicula();
     	Pelicula(int id, string nombre, int duracion, string genero);
     	void mostrar() override;
+		
 };
 
 #endif

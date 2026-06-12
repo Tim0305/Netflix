@@ -17,7 +17,7 @@ class Contenido{
     	string getGenero();
     	string getNombre();
     	void setCalificacion(double calificacion);
-    	virtual void mostrar()= 0;
+    	virtual void mostrar() = 0;
 };
 
 #endif
