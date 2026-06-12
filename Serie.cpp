@@ -8,6 +8,11 @@ Serie::Serie(int id, string nombre, string descripcion, int duracion,
              string genero, string portada)
     : Contenido(id, nombre, descripcion, duracion, genero, portada, "") {}
 
+Serie::Serie(int id, string nombre, string descripcion, int duracion,
+             string genero, string portada, double calificacion, int numeroCalificaciones)
+    : Contenido(id, nombre, descripcion, duracion, genero, portada, "", calificacion, numeroCalificaciones) {
+}
+
 Serie::~Serie() {
   for (Episodio* episodio : episodios) {
     delete episodio;
@@ -20,9 +25,31 @@ void Serie::addEpisodio(Episodio *episodio) {
   addCalificacion(episodio->getCalificacion());
 }
 
+bool Serie::removeEpisodio(Episodio* episodio) {
+for (auto it = episodios.begin(); it != episodios.end(); ++it) {
+    if ((*it)->getId() == episodio->getId()) {
+      delete *it;            
+      episodios.erase(it);  
+      return true;         
+    }
+  }
+  return false; 
+}
+
+bool Serie::removeEpisodio(int id) {
+for (auto it = episodios.begin(); it != episodios.end(); ++it) {
+    if ((*it)->getId() == id) {
+      delete *it;            
+      episodios.erase(it);  
+      return true;         
+    }
+  }
+  return false; 
+}
+
 vector<Episodio *> Serie::getEpisodios() const { return episodios; }
 
-double Serie::getCalificacion() {
+double Serie::getCalificacion() const{
   double calificacion = 0;
   for (auto episodio : episodios) {
     calificacion += episodio->getCalificacion();

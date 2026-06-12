@@ -25,6 +25,9 @@ public:
   Contenido(int id, string nombre, string descripcion, int duracion,
             string genero, string portada, string video);
 
+  Contenido(int id, string nombre, string descripcion, int duracion,
+            string genero, string portada, string video, double calificacion, int numeroCalificaciones);
+
   virtual ~Contenido();
 
   // Getters
@@ -35,8 +38,9 @@ public:
   string getGenero() const;
   string getPortada() const;
   string getVideo() const;
+  int getNumeroCalificaciones() const;
 
-  virtual double getCalificacion();
+  virtual double getCalificacion() const;
   virtual void addCalificacion(double valor) = 0;
 
   // Setters
@@ -48,6 +52,7 @@ public:
   void setGenero(string genero);
   void setPortada(string portada);
   void setVideo(string video);
+  void setCalificacion(double calificacion);
 
   bool operator>(double valor);
   bool operator>=(double valor);

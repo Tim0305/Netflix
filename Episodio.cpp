@@ -11,6 +11,13 @@ Episodio::Episodio(int id, string nombre, string descripcion, int duracion,
   this->serie = serie;
 }
 
+Episodio::Episodio(int id, string nombre, string descripcion, int duracion,
+                   string genero, string video, int temporada, Serie *serie, double calificacion, int numeroCalificaciones)
+    : Contenido(id, nombre, descripcion, duracion, genero, "", video, calificacion, numeroCalificaciones) {
+  this->temporada = temporada;
+  this->serie = serie;
+}
+
 Episodio::~Episodio() {}
 
 Serie *Episodio::getSerie() const { return serie; }

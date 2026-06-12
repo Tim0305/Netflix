@@ -32,6 +32,7 @@ vector<Contenido *> cargarContenidos(string filepath);
 void guardarDatos(string path, const vector<Contenido *> &lista);
 void opcionReproducirContenido(vector<Contenido *> contenidos);
 
+bool eliminarContenido(Contenido *contenido, vector<Contenido *> &contenidos);
 
 int main() {
   vector<Contenido *> contenidos; // El catálogo inicia vacío
@@ -94,12 +95,6 @@ int main() {
 
   // Liberación correcta de memoria (Incluyendo los Episodios* de cada Serie*)
   for (Contenido *c : contenidos) {
-    Serie *s = dynamic_cast<Serie *>(c);
-    if (s != nullptr) {
-      for (Episodio *ep : s->getEpisodios()) {
-        delete ep;
-      }
-    }
     delete c;
   }
   return 0;
@@ -327,7 +322,7 @@ void opcionRegistrarContenido(vector<Contenido *> &contenidos) {
     string nombre = leerLinea();
     cout << "Descripcion: ";
     string desc = leerLinea();
-    cout << "Duracion: ";
+    cout << "Duracion (minutos): ";
     int dur = leerEntero();
     cout << "Genero: ";
     string gen = leerLinea();
@@ -347,7 +342,7 @@ void opcionRegistrarContenido(vector<Contenido *> &contenidos) {
     string nombre = leerLinea();
     cout << "Descripcion: ";
     string desc = leerLinea();
-    cout << "Duracion: ";
+    cout << "Duracion (minutos): ";
     int dur = leerEntero();
     cout << "Genero: ";
     string gen = leerLinea();
@@ -391,7 +386,7 @@ void opcionRegistrarContenido(vector<Contenido *> &contenidos) {
     string nombre = leerLinea();
     cout << "Descripcion: ";
     string desc = leerLinea();
-    cout << "Duracion: ";
+    cout << "Duracion (minutos): ";
     int dur = leerEntero();
     cout << "Genero: ";
     string gen = leerLinea();
@@ -430,6 +425,7 @@ void opcionModificarContenido(vector<Contenido *> &contenidos) {
 
   switch (subOpcion) {
   case 'a': {
+    cout << endl << "Peliculas:" << endl;
     mostrarPeliculas(contenidos);
     cout << endl << "ID de la Pelicula a modificar: ";
     int id = leerEntero();
@@ -448,8 +444,7 @@ void opcionModificarContenido(vector<Contenido *> &contenidos) {
     if (!d.empty())
       p->setDescripcion(d);
     cout << "Duracion (minutos): ";
-    int duracion;
-    cin >> duracion;
+    int duracion = leerEntero();
     p->setDuracion(duracion);
     cout << "Nuevo Genero: ";
     string g = leerLinea();
@@ -467,6 +462,7 @@ void opcionModificarContenido(vector<Contenido *> &contenidos) {
   }
 
   case 'b': {
+    cout << endl << "Series:" << endl;
     mostrarSeries(contenidos);
     cout << endl << "ID de la Serie a modificar: ";
     int id = leerEntero();
@@ -485,8 +481,7 @@ void opcionModificarContenido(vector<Contenido *> &contenidos) {
     if (!d.empty())
       s->setDescripcion(d);
     cout << "Duracion (minutos): ";
-    int duracion;
-    cin >> duracion;
+    int duracion = leerEntero();
     s->setDuracion(duracion);
     cout << "Nuevo Genero: ";
     string g = leerLinea();
@@ -499,6 +494,7 @@ void opcionModificarContenido(vector<Contenido *> &contenidos) {
     break;
   }
   case 'c': {
+    cout << endl << "Series: " << endl;
     mostrarSeries(contenidos);
     cout << endl << "ID de la Serie dueña del episodio: ";
     int idS = leerEntero();
@@ -540,8 +536,7 @@ void opcionModificarContenido(vector<Contenido *> &contenidos) {
     if (!d.empty())
       targetEp->setDescripcion(d);
     cout << "Duracion (minutos): ";
-    int duracion;
-    cin >> duracion;
+    int duracion = leerEntero();
     targetEp->setDuracion(duracion);
     cout << "Nuevo Video: ";
     string vid = leerLinea();
@@ -579,40 +574,32 @@ void opcionEliminarContenido(vector<Contenido *> &contenidos) {
 
   switch (subOpcion) {
   case 'a': {
+    cout << endl << "Peliculas: " << endl;
     mostrarPeliculas(contenidos);
     cout << endl << "ID de la pelicula a eliminar: ";
     int id = leerEntero();
-    for (auto it = contenidos.begin(); it != contenidos.end(); ++it) {
-      if ((*it)->getId() == id) {
-        delete *it;
-        contenidos.erase(it);
-        cout << endl << "Pelicula eliminada exitosamente." << endl;
-        return;
-      }
-    }
+    Contenido *contenido = buscarPelicula(id, contenidos);
+    if (contenido && eliminarContenido(contenido, contenidos))
+      cout << endl << "Pelicula eliminada exitosamente." << endl;
+    else
+      cout << endl << "Error al eliminar la pelicula" << endl;
     break;
   }
 
   case 'b': {
+    cout << endl << "Series: " << endl;
     mostrarSeries(contenidos);
-    cout << endl << "ID de la pelicula a eliminar: ";
+    cout << endl << "ID de la serie a eliminar: ";
     int id = leerEntero();
-
-    for (auto it = contenidos.begin(); it != contenidos.end(); ++it) {
-      if ((*it)->getId() == id) {
-        Serie *s = dynamic_cast<Serie *>(*it);
-        for (Episodio *ep : s->getEpisodios())
-          delete ep;
-        delete *it;
-        contenidos.erase(it);
-        cout << endl << "Serie eliminada exitosamente." << endl;
-        return;
-      }
-    }
-    cout << "ID no encontrado." << endl;
+    Contenido *contenido = buscarSerie(id, contenidos);
+    if (contenido && eliminarContenido(contenido, contenidos))
+      cout << endl << "Serie eliminada exitosamente." << endl;
+    else
+      cout << endl << "Error al eliminar la serie" << endl;
     break;
   }
   case 'c': {
+    cout << endl << "Series: " << endl;
     mostrarSeries(contenidos);
     cout << endl << "ID de la Serie: ";
     int idSerie = leerEntero();
@@ -630,14 +617,7 @@ void opcionEliminarContenido(vector<Contenido *> &contenidos) {
     cout << endl << "ID del Episodio a borrar: ";
     int idEpisodio = leerEntero();
 
-    bool borrado = false;
-    for (Episodio *ep : s->getEpisodios()) {
-      if (ep->getId() == idEpisodio) {
-        delete ep;
-        borrado = true;
-        break;
-      }
-    }
+    bool borrado = s->removeEpisodio(idEpisodio);
     if (borrado) {
       cout << endl << "Episodio eliminado exitosamente." << endl;
     } else {
@@ -655,7 +635,7 @@ void opcionCalificarContenido(vector<Contenido *> &contenidos) {
   char subOpcion;
   do {
     cout << "\n--- CALIFICAR CONTENIDO ---" << endl;
-    cout << "  [a] Pelicula o Serie" << endl;
+    cout << "  [a] Pelicula" << endl;
     cout << "  [b] Episodio especifico" << endl;
     cout << "  [c] Regresar" << endl;
     cout << "  > ";
@@ -668,7 +648,7 @@ void opcionCalificarContenido(vector<Contenido *> &contenidos) {
 
   switch (subOpcion) {
   case 'a': {
-    cout << endl << "--- Videos disponibles en el catalogo ---" << endl;
+    cout << endl << "Peliculas" << endl;
     for (Contenido *c : contenidos) {
       string tipo = dynamic_cast<Pelicula *>(c) ? "Pelicula" : "Serie";
       cout << "ID: " << c->getId() << " [" << tipo << "] -> " << c->getNombre()
@@ -696,8 +676,9 @@ void opcionCalificarContenido(vector<Contenido *> &contenidos) {
     break;
   }
   case 'b': {
+    cout << endl << "Series" << endl;
     mostrarSeries(contenidos);
-    cout << "ID de la Serie: ";
+    cout << endl << "ID de la Serie: ";
     int idS = leerEntero();
     Serie *s = buscarSerie(idS, contenidos);
     if (!s) {
@@ -706,10 +687,10 @@ void opcionCalificarContenido(vector<Contenido *> &contenidos) {
     }
 
     for (Episodio *ep : s->getEpisodios()) {
-      cout << "  ID Ep: " << ep->getId() << " - " << ep->getNombre()
+      cout << "  ID Episodio: " << ep->getId() << " - " << ep->getNombre()
            << " (Calif: " << ep->getCalificacion() << ")" << endl;
     }
-    cout << "ID del Episodio a calificar: ";
+    cout << endl << "ID del Episodio a calificar: ";
     int idEp = leerEntero();
     cout << "Calificacion (1 a 5): ";
     double valor = leerDouble();
@@ -784,7 +765,7 @@ vector<Contenido *> cargarContenidos(string filepath) {
 
     if (tipo == "P") {
       // Pelicula
-      string id_s, nombre, descripcion, duracion_s, genero, portada, video;
+      string id_s, nombre, descripcion, duracion_s, genero, portada, video, calificacion_s, numeroCalificaciones_s;
       getline(ss, id_s, ',');
       getline(ss, nombre, ',');
       getline(ss, descripcion, ',');
@@ -792,41 +773,46 @@ vector<Contenido *> cargarContenidos(string filepath) {
       getline(ss, genero, ',');
       getline(ss, portada, ',');
       getline(ss, video, ',');
+      getline(ss, calificacion_s, ',');
+      getline(ss, numeroCalificaciones_s, ',');
 
       Pelicula *p = new Pelicula(stoi(id_s), nombre, descripcion,
-                                 stoi(duracion_s), genero, portada, video);
+                                 stoi(duracion_s), genero, portada, video, stod(calificacion_s), stoi(numeroCalificaciones_s));
       lista.push_back(p);
 
     } else if (tipo == "S") {
       // Serie
-      string id_s, nombre, descripcion, duracion_s, genero, portada;
+      string id_s, nombre, descripcion, duracion_s, genero, portada, calificacion_s, numeroCalificaciones_s;
       getline(ss, id_s, ',');
       getline(ss, nombre, ',');
       getline(ss, descripcion, ',');
       getline(ss, duracion_s, ',');
       getline(ss, genero, ',');
-      getline(ss, portada, ','); // Último parámetro de Serie
+      getline(ss, portada, ',');
+      getline(ss, calificacion_s, ',');
+      getline(ss, numeroCalificaciones_s, ',');
 
       Serie *s = new Serie(stoi(id_s), nombre, descripcion, stoi(duracion_s),
-                           genero, portada);
+                           genero, portada, stod(calificacion_s), stoi(numeroCalificaciones_s));
       lista.push_back(s);
       ultimaSerie = s;
 
     } else if (tipo == "E") {
       // Episodio
-      string id_s, nombre, descripcion, duracion_s, genero, video, temporada_s;
+      string id_s, nombre, descripcion, duracion_s, genero, video, temporada_s, calificacion_s, numeroCalificaciones_s;
       getline(ss, id_s, ',');
       getline(ss, nombre, ',');
       getline(ss, descripcion, ',');
       getline(ss, duracion_s, ',');
       getline(ss, genero, ',');
-      getline(ss, video,
-              ','); // Se salta la lectura de portada directamente a video
+      getline(ss, video, ','); 
       getline(ss, temporada_s, ',');
+      getline(ss, calificacion_s, ',');
+      getline(ss, numeroCalificaciones_s, ',');
 
       Episodio *ep =
           new Episodio(stoi(id_s), nombre, descripcion, stoi(duracion_s),
-                       genero, video, stoi(temporada_s), nullptr);
+                       genero, video, stoi(temporada_s), nullptr, stod(calificacion_s), stoi(numeroCalificaciones_s));
 
       if (ultimaSerie != nullptr) {
         ultimaSerie->addEpisodio(ep);
@@ -857,7 +843,7 @@ void guardarDatos(string path, const vector<Contenido *> &lista) {
       archivo << "P," << p->getId() << "," << p->getNombre() << ","
               << p->getDescripcion() << "," << p->getDuracion() << ","
               << p->getGenero() << "," << p->getPortada() << ","
-              << p->getVideo() << "\n";
+              << p->getVideo() << "," << p->getCalificacion() << "," << p->getNumeroCalificaciones() << "\n";
       continue;
     }
 
@@ -866,14 +852,14 @@ void guardarDatos(string path, const vector<Contenido *> &lista) {
       // Serie omite video
       archivo << "S," << s->getId() << "," << s->getNombre() << ","
               << s->getDescripcion() << "," << s->getDuracion() << ","
-              << s->getGenero() << "," << s->getPortada() << "\n";
+              << s->getGenero() << "," << s->getPortada() << "," << s->getCalificacion() << "," << s->getNumeroCalificaciones() << "\n";
 
       for (Episodio *ep : s->getEpisodios()) {
         // Episodio omite portada
         archivo << "E," << ep->getId() << "," << ep->getNombre() << ","
                 << ep->getDescripcion() << "," << ep->getDuracion() << ","
                 << ep->getGenero() << "," << ep->getVideo() << ","
-                << ep->getTemporada() << "\n";
+                << ep->getTemporada() << "," << ep->getCalificacion() << "," << ep->getNumeroCalificaciones() << "\n";
       }
     }
   }
@@ -951,4 +937,14 @@ void opcionReproducirContenido(vector<Contenido *> contenidos) {
       return;
     }
   }
+}
+bool eliminarContenido(Contenido *contenido, vector<Contenido *> &contenidos) {
+  for (auto it = contenidos.begin(); it != contenidos.end(); ++it) {
+    if ((*it)->getId() == contenido->getId()) {
+      delete *it;
+      contenidos.erase(it);
+      return true;
+    }
+  }
+  return false;
 }
