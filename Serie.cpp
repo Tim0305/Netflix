@@ -20,6 +20,28 @@ void Serie::addEpisodio(Episodio *episodio) {
   addCalificacion(episodio->getCalificacion());
 }
 
+bool Serie::removeEpisodio(Episodio* episodio) {
+for (auto it = episodios.begin(); it != episodios.end(); ++it) {
+    if ((*it)->getId() == episodio->getId()) {
+      delete *it;            
+      episodios.erase(it);  
+      return true;         
+    }
+  }
+  return false; 
+}
+
+bool Serie::removeEpisodio(int id) {
+for (auto it = episodios.begin(); it != episodios.end(); ++it) {
+    if ((*it)->getId() == id) {
+      delete *it;            
+      episodios.erase(it);  
+      return true;         
+    }
+  }
+  return false; 
+}
+
 vector<Episodio *> Serie::getEpisodios() const { return episodios; }
 
 double Serie::getCalificacion() {

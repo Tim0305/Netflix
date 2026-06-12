@@ -21,6 +21,8 @@ public:
 
   ~Serie();
   void addEpisodio(Episodio* episodio);
+  bool removeEpisodio(Episodio *episodio);
+  bool removeEpisodio(int id);
   int getTemporadas();
   int getTotalEpisodios();
   double getCalificacion() override;
