@@ -9,6 +9,7 @@ using namespace cv;
 
 namespace {
     string exec(const char* cmd) {
+        try{
         array<char, 128> buffer;
         string result;
         unique_ptr<FILE, decltype(&pclose)> pipe(popen(cmd, "r"), pclose);
@@ -20,6 +21,9 @@ namespace {
         }
         result.erase(result.find_last_not_of(" \n\r\t") + 1);
         return result;
+    } catch (const runtime_error& e){
+        cerr << endl << "Error al abrir el buffer: " << e.what() <<endl;
+    }
     }
 }
 

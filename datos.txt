@@ -1,4 +1,4 @@
-P,1,Spider-Man: Across the Spider-Verse,Aventura en el multiverso aracnido,140,Ciencia Ficcion,spiderman.jpeg,https://youtu.be/oBmazlyP220,3.66667,3
+P,1,Spider-Man: Across the Spider-Verse,Aventura en el multiverso aracnido,140,Ciencia Ficcion,spiderman.jpeg,https://youtu.be/oBmazlyP220,4,4
 P,2,The Truman Show,La vida de Truman es un reality show,103,Drama / Comedy,truman.jpeg,https://youtu.be/dlnmQbPGuls,1,1
 P,3,Las Ventajas de ser invencible,Historia adolescente sobre la amistad,103,Drama,invisible.jpeg,https://youtu.be/zXWW4V7hcWc,1,1
 P,4,Wiplash,Un baterista llevado al limite,107,Drama,whiplash.jpeg,https://youtu.be/7d_jQycdQGo,1,1

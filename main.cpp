@@ -228,7 +228,7 @@ void opcionMostrarCatalogo(vector<Contenido *> contenidos) {
       cout << "\n--- Videos con calificacion >= " << targetCal << " ---"
            << endl;
       for (Contenido *c : contenidos) {
-        if (c->getCalificacion() >= targetCal) {
+        if (*c>= targetCal) {
           cout << c->toString() << endl << endl;
         }
       }
@@ -264,7 +264,7 @@ void opcionMostrarCatalogo(vector<Contenido *> contenidos) {
 
       bool existeEpisodio = false;
       for (Episodio *ep : serie->getEpisodios()) {
-        if (ep->getCalificacion() >= targetCal) {
+        if (*ep >= targetCal) {
           existeEpisodio = true;
           cout << ep->toString() << endl << endl;
         }
@@ -281,7 +281,7 @@ void opcionMostrarCatalogo(vector<Contenido *> contenidos) {
 
       bool existePelicula = false;
       for (Contenido *c : contenidos) {
-        if (dynamic_cast<Pelicula *>(c) && c->getCalificacion() >= targetCal) {
+        if (dynamic_cast<Pelicula *>(c) && *c >= targetCal) {
           existePelicula = true;
           cout << c->toString() << endl << endl;
         }
