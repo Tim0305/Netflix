@@ -1,20 +1,30 @@
 #include "Pelicula.h"
 
-Pelicula::Pelicula(
-    int Id,
-    string Nombre,
-    string Descripcion,
-    string Genero,
-    double Calificacion)
-    :
-    Contenido(
-        Id,
-        Nombre,
-        Descripcion,
-        Genero,
-        Calificacion)
-{}
+Pelicula::Pelicula()
+: Contenido()
+{
+}
 
-double Pelicula::getCalificacion(){
-    return calificacion;
+Pelicula::Pelicula(
+    int id,
+    string nombre,
+    string descripcion,
+    int duracion,
+    string genero,
+    string portada,
+    string video)
+:
+Contenido(
+    id,
+    nombre,
+    descripcion,
+    duracion,
+    genero,
+    portada,
+    video)
+{
+}
+
+Pelicula::~Pelicula()
+{
 }

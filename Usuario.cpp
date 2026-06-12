@@ -1,28 +1,87 @@
-#ifndef USUARIO_H
-#define USUARIO_H
+#include "Usuario.h"
+#include "Contenido.h"
 
-#include <string>
-
-using namespace std;
-
-class Usuario
+Usuario::Usuario()
 {
-private:
-    int id;
-    string nombre;
-    string password;
-    string rol;
+    id = 0;
+    nombre = "";
+    password = "";
+    rol = "cliente";
+}
 
-public:
-    Usuario();
+Usuario::Usuario(
+    int id,
+    string nombre,
+    string password,
+    string rol)
+{
+    this->id = id;
+    this->nombre = nombre;
+    this->password = password;
+    this->rol = rol;
+}
 
-    Usuario(
-        int id,
-        string nombre,
-        string password,
-        string rol);
+Usuario::~Usuario()
+{
+}
 
-    void mostrarInfo();
-};
+// GETTERS
 
-#endif
+int Usuario::getId() const
+{
+    return id;
+}
+
+string Usuario::getNombre() const
+{
+    return nombre;
+}
+
+string Usuario::getPassword() const
+{
+    return password;
+}
+
+string Usuario::getRol() const
+{
+    return rol;
+}
+
+// SETTERS
+
+void Usuario::setId(int id)
+{
+    this->id = id;
+}
+
+void Usuario::setNombre(string nombre)
+{
+    this->nombre = nombre;
+}
+
+void Usuario::setPassword(string password)
+{
+    this->password = password;
+}
+
+void Usuario::setRol(string rol)
+{
+    this->rol = rol;
+}
+
+// AUTENTICACION
+
+bool Usuario::autenticar(
+    string passwordIngresado) const
+{
+    return password == passwordIngresado;
+}
+
+// CALIFICAR CONTENIDO
+
+void Usuario::calificarContenido(
+    Contenido* contenido,
+    double calificacion)
+{
+    contenido->addCalificacion(calificacion);
+}

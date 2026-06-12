@@ -1,24 +1,43 @@
 #include "Episodio.h"
-#include <iostream>
-
-using namespace std;
 
 Episodio::Episodio()
+: Contenido()
 {
+    temporada = 1;
 }
 
 Episodio::Episodio(
-    int numero,
-    string titulo,
-    int duracion)
+    int id,
+    string nombre,
+    string descripcion,
+    int duracion,
+    string genero,
+    string portada,
+    string video,
+    int temporada)
+:
+Contenido(
+    id,
+    nombre,
+    descripcion,
+    duracion,
+    genero,
+    portada,
+    video)
 {
-    this->numero = numero;
-    this->titulo = titulo;
-    this->duracion = duracion;
+    this->temporada = temporada;
 }
 
-void Episodio::mostrarInfo()
+Episodio::~Episodio()
 {
-    cout << "Episodio " << numero
-         << ": " << titulo << endl;
+}
+
+int Episodio::getTemporada() const {
+
+    return temporada;
+}
+
+void Episodio::setTemporada(int temporada) {
+
+    this->temporada = temporada;
 }

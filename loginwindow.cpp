@@ -1,6 +1,5 @@
 #include "loginwindow.h"
 #include "ui_loginwindow.h"
-#include "appdb.h"         
 #include <iostream>
 #include <QMessageBox>
 
@@ -31,20 +30,8 @@ void LoginWindow::on_loginButton_clicked()
             "Error",
             "Usuario o contraseña inválidos");
     else {
-        auto encontrado = appDb().buscarUsuarioPorNombre(user);
-        if (encontrado && encontrado->password == password) {
-            QMessageBox::information(
-                this,
-                "Bienvenido",
-                QString("Hola %1 [%2]")
-                    .arg(QString::fromStdString(encontrado->nombre))
-                    .arg(QString::fromStdString(encontrado->rol)));
-        } else {
-            QMessageBox::critical(
-                this,
-                "Error",
-                "Usuario o contraseña incorrectos");
-        }
+        cout << "User: " << user << endl;
+        cout << "Password: " << password << endl;
     }
 }
 
