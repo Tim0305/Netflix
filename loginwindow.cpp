@@ -11,6 +11,9 @@ LoginWindow::LoginWindow(QWidget *parent)
     , ui(new Ui::LoginWindow)
 {
     ui->setupUi(this);
+
+    ADMIN_USER = "admin";
+    ADMIN_PASSWORD = "admin";
 }
 
 LoginWindow::~LoginWindow()
@@ -51,7 +54,7 @@ void LoginWindow::on_loginButton_clicked()
 void LoginWindow::on_signupButton_clicked()
 {
     // Ir al sign up page
-    emit signup();
+    emit gotoSignup();
 }
 
 void LoginWindow::reset() {

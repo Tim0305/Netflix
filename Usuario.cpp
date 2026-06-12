@@ -1,28 +1,28 @@
-#ifndef USUARIO_H
-#define USUARIO_H
+#include "Usuario.h"
 
-#include <string>
+Usuario::Usuario(){
+	id = 0;
+	nombre = "";
+	password = "";
+	rol = "";
+}
 
-using namespace std;
-
-class Usuario
+Usuario::Usuario(
+	int id,
+	string nombre,
+	string password,
+	string rol)
 {
-private:
-    int id;
-    string nombre;
-    string password;
-    string rol;
+	this->id = id;
+	this->nombre = nombre;
+	this->password = password;
+	this->rol = rol;
+}
 
-public:
-    Usuario();
+void Usuario::mostrar(){
 
-    Usuario(
-        int id,
-        string nombre,
-        string password,
-        string rol);
-
-    void mostrarInfo();
-};
-
-#endif
+	cout << "----- USUARIO -----" << endl;
+	cout << "ID: " << id << endl;
+	cout << "Nombre: " << nombre << endl;
+	cout << "Rol: " << rol << endl;
+}

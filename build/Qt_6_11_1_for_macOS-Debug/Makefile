@@ -224,6 +224,78 @@ Netflix_autogen/mocs_compilation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Netflix.dir/build.make CMakeFiles/Netflix.dir/Netflix_autogen/mocs_compilation.cpp.s
 .PHONY : Netflix_autogen/mocs_compilation.cpp.s
 
+adminwindow.o: adminwindow.cpp.o
+.PHONY : adminwindow.o
+
+# target to build an object file
+adminwindow.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Netflix.dir/build.make CMakeFiles/Netflix.dir/adminwindow.cpp.o
+.PHONY : adminwindow.cpp.o
+
+adminwindow.i: adminwindow.cpp.i
+.PHONY : adminwindow.i
+
+# target to preprocess a source file
+adminwindow.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Netflix.dir/build.make CMakeFiles/Netflix.dir/adminwindow.cpp.i
+.PHONY : adminwindow.cpp.i
+
+adminwindow.s: adminwindow.cpp.s
+.PHONY : adminwindow.s
+
+# target to generate assembly for a file
+adminwindow.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Netflix.dir/build.make CMakeFiles/Netflix.dir/adminwindow.cpp.s
+.PHONY : adminwindow.cpp.s
+
+generoswindow.o: generoswindow.cpp.o
+.PHONY : generoswindow.o
+
+# target to build an object file
+generoswindow.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Netflix.dir/build.make CMakeFiles/Netflix.dir/generoswindow.cpp.o
+.PHONY : generoswindow.cpp.o
+
+generoswindow.i: generoswindow.cpp.i
+.PHONY : generoswindow.i
+
+# target to preprocess a source file
+generoswindow.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Netflix.dir/build.make CMakeFiles/Netflix.dir/generoswindow.cpp.i
+.PHONY : generoswindow.cpp.i
+
+generoswindow.s: generoswindow.cpp.s
+.PHONY : generoswindow.s
+
+# target to generate assembly for a file
+generoswindow.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Netflix.dir/build.make CMakeFiles/Netflix.dir/generoswindow.cpp.s
+.PHONY : generoswindow.cpp.s
+
+generowidget.o: generowidget.cpp.o
+.PHONY : generowidget.o
+
+# target to build an object file
+generowidget.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Netflix.dir/build.make CMakeFiles/Netflix.dir/generowidget.cpp.o
+.PHONY : generowidget.cpp.o
+
+generowidget.i: generowidget.cpp.i
+.PHONY : generowidget.i
+
+# target to preprocess a source file
+generowidget.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Netflix.dir/build.make CMakeFiles/Netflix.dir/generowidget.cpp.i
+.PHONY : generowidget.cpp.i
+
+generowidget.s: generowidget.cpp.s
+.PHONY : generowidget.s
+
+# target to generate assembly for a file
+generowidget.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Netflix.dir/build.make CMakeFiles/Netflix.dir/generowidget.cpp.s
+.PHONY : generowidget.cpp.s
+
 loginwindow.o: loginwindow.cpp.o
 .PHONY : loginwindow.o
 
@@ -296,6 +368,78 @@ mainwindow.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Netflix.dir/build.make CMakeFiles/Netflix.dir/mainwindow.cpp.s
 .PHONY : mainwindow.cpp.s
 
+modificarusuariowindow.o: modificarusuariowindow.cpp.o
+.PHONY : modificarusuariowindow.o
+
+# target to build an object file
+modificarusuariowindow.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Netflix.dir/build.make CMakeFiles/Netflix.dir/modificarusuariowindow.cpp.o
+.PHONY : modificarusuariowindow.cpp.o
+
+modificarusuariowindow.i: modificarusuariowindow.cpp.i
+.PHONY : modificarusuariowindow.i
+
+# target to preprocess a source file
+modificarusuariowindow.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Netflix.dir/build.make CMakeFiles/Netflix.dir/modificarusuariowindow.cpp.i
+.PHONY : modificarusuariowindow.cpp.i
+
+modificarusuariowindow.s: modificarusuariowindow.cpp.s
+.PHONY : modificarusuariowindow.s
+
+# target to generate assembly for a file
+modificarusuariowindow.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Netflix.dir/build.make CMakeFiles/Netflix.dir/modificarusuariowindow.cpp.s
+.PHONY : modificarusuariowindow.cpp.s
+
+peliculasadminwindow.o: peliculasadminwindow.cpp.o
+.PHONY : peliculasadminwindow.o
+
+# target to build an object file
+peliculasadminwindow.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Netflix.dir/build.make CMakeFiles/Netflix.dir/peliculasadminwindow.cpp.o
+.PHONY : peliculasadminwindow.cpp.o
+
+peliculasadminwindow.i: peliculasadminwindow.cpp.i
+.PHONY : peliculasadminwindow.i
+
+# target to preprocess a source file
+peliculasadminwindow.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Netflix.dir/build.make CMakeFiles/Netflix.dir/peliculasadminwindow.cpp.i
+.PHONY : peliculasadminwindow.cpp.i
+
+peliculasadminwindow.s: peliculasadminwindow.cpp.s
+.PHONY : peliculasadminwindow.s
+
+# target to generate assembly for a file
+peliculasadminwindow.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Netflix.dir/build.make CMakeFiles/Netflix.dir/peliculasadminwindow.cpp.s
+.PHONY : peliculasadminwindow.cpp.s
+
+registrarusuariowindow.o: registrarusuariowindow.cpp.o
+.PHONY : registrarusuariowindow.o
+
+# target to build an object file
+registrarusuariowindow.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Netflix.dir/build.make CMakeFiles/Netflix.dir/registrarusuariowindow.cpp.o
+.PHONY : registrarusuariowindow.cpp.o
+
+registrarusuariowindow.i: registrarusuariowindow.cpp.i
+.PHONY : registrarusuariowindow.i
+
+# target to preprocess a source file
+registrarusuariowindow.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Netflix.dir/build.make CMakeFiles/Netflix.dir/registrarusuariowindow.cpp.i
+.PHONY : registrarusuariowindow.cpp.i
+
+registrarusuariowindow.s: registrarusuariowindow.cpp.s
+.PHONY : registrarusuariowindow.s
+
+# target to generate assembly for a file
+registrarusuariowindow.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Netflix.dir/build.make CMakeFiles/Netflix.dir/registrarusuariowindow.cpp.s
+.PHONY : registrarusuariowindow.cpp.s
+
 signupwindow.o: signupwindow.cpp.o
 .PHONY : signupwindow.o
 
@@ -320,6 +464,54 @@ signupwindow.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Netflix.dir/build.make CMakeFiles/Netflix.dir/signupwindow.cpp.s
 .PHONY : signupwindow.cpp.s
 
+usuarioswindow.o: usuarioswindow.cpp.o
+.PHONY : usuarioswindow.o
+
+# target to build an object file
+usuarioswindow.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Netflix.dir/build.make CMakeFiles/Netflix.dir/usuarioswindow.cpp.o
+.PHONY : usuarioswindow.cpp.o
+
+usuarioswindow.i: usuarioswindow.cpp.i
+.PHONY : usuarioswindow.i
+
+# target to preprocess a source file
+usuarioswindow.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Netflix.dir/build.make CMakeFiles/Netflix.dir/usuarioswindow.cpp.i
+.PHONY : usuarioswindow.cpp.i
+
+usuarioswindow.s: usuarioswindow.cpp.s
+.PHONY : usuarioswindow.s
+
+# target to generate assembly for a file
+usuarioswindow.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Netflix.dir/build.make CMakeFiles/Netflix.dir/usuarioswindow.cpp.s
+.PHONY : usuarioswindow.cpp.s
+
+usuariowidget.o: usuariowidget.cpp.o
+.PHONY : usuariowidget.o
+
+# target to build an object file
+usuariowidget.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Netflix.dir/build.make CMakeFiles/Netflix.dir/usuariowidget.cpp.o
+.PHONY : usuariowidget.cpp.o
+
+usuariowidget.i: usuariowidget.cpp.i
+.PHONY : usuariowidget.i
+
+# target to preprocess a source file
+usuariowidget.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Netflix.dir/build.make CMakeFiles/Netflix.dir/usuariowidget.cpp.i
+.PHONY : usuariowidget.cpp.i
+
+usuariowidget.s: usuariowidget.cpp.s
+.PHONY : usuariowidget.s
+
+# target to generate assembly for a file
+usuariowidget.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Netflix.dir/build.make CMakeFiles/Netflix.dir/usuariowidget.cpp.s
+.PHONY : usuariowidget.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -338,6 +530,15 @@ help:
 	@echo "... Netflix_autogen/mocs_compilation.o"
 	@echo "... Netflix_autogen/mocs_compilation.i"
 	@echo "... Netflix_autogen/mocs_compilation.s"
+	@echo "... adminwindow.o"
+	@echo "... adminwindow.i"
+	@echo "... adminwindow.s"
+	@echo "... generoswindow.o"
+	@echo "... generoswindow.i"
+	@echo "... generoswindow.s"
+	@echo "... generowidget.o"
+	@echo "... generowidget.i"
+	@echo "... generowidget.s"
 	@echo "... loginwindow.o"
 	@echo "... loginwindow.i"
 	@echo "... loginwindow.s"
@@ -347,9 +548,24 @@ help:
 	@echo "... mainwindow.o"
 	@echo "... mainwindow.i"
 	@echo "... mainwindow.s"
+	@echo "... modificarusuariowindow.o"
+	@echo "... modificarusuariowindow.i"
+	@echo "... modificarusuariowindow.s"
+	@echo "... peliculasadminwindow.o"
+	@echo "... peliculasadminwindow.i"
+	@echo "... peliculasadminwindow.s"
+	@echo "... registrarusuariowindow.o"
+	@echo "... registrarusuariowindow.i"
+	@echo "... registrarusuariowindow.s"
 	@echo "... signupwindow.o"
 	@echo "... signupwindow.i"
 	@echo "... signupwindow.s"
+	@echo "... usuarioswindow.o"
+	@echo "... usuarioswindow.i"
+	@echo "... usuarioswindow.s"
+	@echo "... usuariowidget.o"
+	@echo "... usuariowidget.i"
+	@echo "... usuariowidget.s"
 .PHONY : help
 
 

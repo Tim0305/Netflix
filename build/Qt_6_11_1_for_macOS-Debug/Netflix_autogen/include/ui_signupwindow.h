@@ -56,7 +56,7 @@ public:
         sizePolicy.setHeightForWidth(label->sizePolicy().hasHeightForWidth());
         label->setSizePolicy(sizePolicy);
         QFont font;
-        font.setPointSize(18);
+        font.setPointSize(20);
         font.setBold(true);
         label->setFont(font);
         label->setAlignment(Qt::AlignmentFlag::AlignCenter);
@@ -99,6 +99,9 @@ public:
 
 
         retranslateUi(SignUpWindow);
+
+        signinButton->setDefault(true);
+
 
         QMetaObject::connectSlotsByName(SignUpWindow);
     } // setupUi

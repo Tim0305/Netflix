@@ -1,8 +1,16 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Netflix_autogen"
+  "Netflix_autogen/include/ui_adminwindow.h"
+  "Netflix_autogen/include/ui_generoswindow.h"
+  "Netflix_autogen/include/ui_generowidget.h"
   "Netflix_autogen/include/ui_loginwindow.h"
   "Netflix_autogen/include/ui_mainwindow.h"
+  "Netflix_autogen/include/ui_modificarusuariowindow.h"
+  "Netflix_autogen/include/ui_peliculasadminwindow.h"
+  "Netflix_autogen/include/ui_registrarusuariowindow.h"
   "Netflix_autogen/include/ui_signupwindow.h"
+  "Netflix_autogen/include/ui_usuarioswindow.h"
+  "Netflix_autogen/include/ui_usuariowidget.h"
   "Netflix_autogen/mocs_compilation.cpp"
   "Netflix_autogen/timestamp"
 )

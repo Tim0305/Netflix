@@ -21,10 +21,13 @@ private slots:
     void on_loginButton_clicked();
 
 signals:
-    void signup();
+    void gotoSignup();
+    void gotoAdmin();
 
 private:
     Ui::LoginWindow *ui;
+    std::string ADMIN_USER;
+    std::string ADMIN_PASSWORD;
 };
 
 #endif // LOGINWINDOW_H

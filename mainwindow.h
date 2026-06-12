@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include "loginwindow.h"
 #include "signupwindow.h"
+#include "adminwindow.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -23,7 +24,10 @@ private:
     Ui::MainWindow *ui;
     LoginWindow *loginWindow;
     SignUpWindow *signUpWindow;
+
+    void logout();
     void showSignUpWindow();
     void showLoginWindow();
+    void showAdminWindow();
 };
 #endif // MAINWINDOW_H
