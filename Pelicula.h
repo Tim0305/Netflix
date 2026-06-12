@@ -1,16 +1,27 @@
-#include <iostream>
-#include <string>
-#include "Contenido.h"
-using namespace std;
-
 #ifndef PELICULA_H
 #define PELICULA_H
 
-class Pelicula: public Contenido{
-	public:
-		Pelicula();
-    	Pelicula(int id, string nombre, int duracion, string genero);
-    	void mostrar() override;
+#include "Contenido.h"
+
+class Pelicula : public Contenido {
+
+public:
+
+    Pelicula();
+
+    Pelicula(
+        int id,
+        string nombre,
+        string descripcion,
+        int duracion,
+        string genero,
+        string portada,
+        string video
+    );
+
+    ~Pelicula();
+
+    double getCalificacion() const override;
 };
 
 #endif
