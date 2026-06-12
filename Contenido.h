@@ -68,6 +68,7 @@ public:
     void addCalificacion(double valor);
 
     bool operator>(double valor);
+	void reproducir() const;
 };
 
 #endif
