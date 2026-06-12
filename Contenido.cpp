@@ -7,7 +7,7 @@ Contenido::Contenido() {
     descripcion = "";
     duracion = 0;
 
-    calificacion = 0;
+	sumaCalificaciones = 0;
     numeroCalificaciones = 0;
 
     genero = "";
@@ -33,7 +33,6 @@ Contenido::Contenido(
     this->portada = portada;
     this->video = video;
 
-    calificacion = 0;
     numeroCalificaciones = 0;
 }
 
@@ -68,6 +67,14 @@ string Contenido::getPortada() const {
 
 string Contenido::getVideo() const {
     return video;
+}
+double Contenido::getCalificacion() const {
+
+    if(numeroCalificaciones == 0)
+        return 0;
+
+    return sumaCalificaciones /
+           numeroCalificaciones;
 }
 
 // Setters
@@ -112,19 +119,12 @@ void Contenido::setVideo(string video) {
 }
 
 void Contenido::addCalificacion(double valor) {
-
-    calificacion =
-    (
-        calificacion * numeroCalificaciones
-        + valor
-    )
-    /
-    (numeroCalificaciones + 1);
+	sumaCalificaciones += valor;
 
     numeroCalificaciones++;
 }
 
-bool Contenido::operator>(double valor) {
-
+bool Contenido::operator>(double valor)
+{
     return getCalificacion() > valor;
 }

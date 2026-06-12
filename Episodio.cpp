@@ -41,8 +41,3 @@ void Episodio::setTemporada(int temporada) {
 
     this->temporada = temporada;
 }
-
-double Episodio::getCalificacion() const {
-
-    return calificacion;
-}

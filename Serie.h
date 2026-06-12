@@ -14,8 +14,6 @@ private:
 
     vector<Episodio> episodios;
 
-    double calcularPromedio() const;
-
 public:
 
     Serie();
@@ -37,8 +35,6 @@ public:
     vector<Episodio> getEpisodios() const;
 
     double operator+();
-
-    double getCalificacion() const override;
 };
 
 #endif

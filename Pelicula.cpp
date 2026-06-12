@@ -28,8 +28,3 @@ Contenido(
 Pelicula::~Pelicula()
 {
 }
-
-double Pelicula::getCalificacion() const {
-
-    return calificacion;
-}

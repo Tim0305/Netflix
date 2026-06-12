@@ -13,8 +13,9 @@ protected:
     string nombre;
     string descripcion;
     int duracion;
+	protected:
 
-    double calificacion;
+    double sumaCalificaciones;
     int numeroCalificaciones;
 
     string genero;
@@ -46,7 +47,7 @@ public:
     string getPortada() const;
     string getVideo() const;
 
-    virtual double getCalificacion() const = 0;
+    virtual double getCalificacion() const;
 
     // Setters
     void setId(int id);

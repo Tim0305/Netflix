@@ -21,7 +21,6 @@ public:
 
     ~Pelicula();
 
-    double getCalificacion() const override;
 };
 
 #endif

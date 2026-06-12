@@ -30,7 +30,6 @@ public:
 
     void setTemporada(int temporada);
 
-    double getCalificacion() const override;
 };
 
 #endif
