@@ -16,18 +16,19 @@ Contenido::Contenido() {
 }
 
 Contenido::Contenido(int id, string nombre, string descripcion, int duracion,
-                     string genero, string portada, string video) {
-  this->id = id;
-  this->nombre = nombre;
-  this->descripcion = descripcion;
-  this->duracion = duracion;
-
-  this->genero = genero;
-  this->portada = portada;
-  this->video = video;
-
+                     string genero, string portada, string video)
+    : id(id), nombre(nombre), descripcion(descripcion), duracion(duracion),
+      genero(genero), portada(portada), video(video) {
   numeroCalificaciones = 0;
+  calificacion = 0;
 }
+
+Contenido::Contenido(int id, string nombre, string descripcion, int duracion,
+                     string genero, string portada, string video,
+                     double calificacion, int numeroCalificaciones)
+    : id(id), nombre(nombre), descripcion(descripcion), duracion(duracion),
+      genero(genero), portada(portada), video(video),
+      calificacion(calificacion), numeroCalificaciones(numeroCalificaciones) {}
 
 Contenido::~Contenido() {}
 
@@ -46,6 +47,8 @@ string Contenido::getGenero() const { return genero; }
 string Contenido::getPortada() const { return portada; }
 
 string Contenido::getVideo() const { return video; }
+
+int Contenido::getNumeroCalificaciones() const { return numeroCalificaciones; }
 
 // Setters
 
@@ -69,12 +72,16 @@ void Contenido::setPortada(string portada) { this->portada = portada; }
 
 void Contenido::setVideo(string video) { this->video = video; }
 
+void Contenido::setCalificacion(double calificacion) {
+  this->calificacion = calificacion;
+}
+
 bool Contenido::operator>(double valor) { return getCalificacion() > valor; }
 bool Contenido::operator>=(double valor) { return getCalificacion() >= valor; }
 bool Contenido::operator<(double valor) { return getCalificacion() < valor; }
 bool Contenido::operator<=(double valor) { return getCalificacion() <= valor; }
 
-double Contenido::getCalificacion() { return calificacion; }
+double Contenido::getCalificacion() const { return calificacion; }
 
 string Contenido::toString() {
   stringstream ss;

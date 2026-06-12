@@ -17,6 +17,9 @@ public:
 
   Episodio(int id, string nombre, string descripcion, int duracion,
            string genero, string video, int temporada, Serie *serie);
+  Episodio(int id, string nombre, string descripcion, int duracion,
+           string genero, string video, int temporada, Serie *serie,
+           double calificacion, int numeroCalificaciones);
 
   ~Episodio();
   int getTemporada() const;

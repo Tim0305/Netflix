@@ -18,6 +18,8 @@ public:
 
   Serie(int id, string nombre, string descripcion, int duracion, string genero,
         string portada);
+  Serie(int id, string nombre, string descripcion, int duracion, string genero,
+        string portada, double calificacion, int numeroCalificaciones);
 
   ~Serie();
   void addEpisodio(Episodio* episodio);
@@ -25,7 +27,7 @@ public:
   bool removeEpisodio(int id);
   int getTemporadas();
   int getTotalEpisodios();
-  double getCalificacion() override;
+  double getCalificacion() const override;
   void addCalificacion(double valor) override;
   vector<Episodio *> getEpisodios() const;
   string toString() override;

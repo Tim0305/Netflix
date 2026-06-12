@@ -88,12 +88,6 @@ int main() {
 
   // Liberación correcta de memoria (Incluyendo los Episodios* de cada Serie*)
   for (Contenido *c : contenidos) {
-    Serie *s = dynamic_cast<Serie *>(c);
-    if (s != nullptr) {
-      for (Episodio *ep : s->getEpisodios()) {
-        delete ep;
-      }
-    }
     delete c;
   }
   return 0;
@@ -321,7 +315,7 @@ void opcionRegistrarContenido(vector<Contenido *> &contenidos) {
     string nombre = leerLinea();
     cout << "Descripcion: ";
     string desc = leerLinea();
-    cout << "Duracion: ";
+    cout << "Duracion (minutos): ";
     int dur = leerEntero();
     cout << "Genero: ";
     string gen = leerLinea();
@@ -341,7 +335,7 @@ void opcionRegistrarContenido(vector<Contenido *> &contenidos) {
     string nombre = leerLinea();
     cout << "Descripcion: ";
     string desc = leerLinea();
-    cout << "Duracion: ";
+    cout << "Duracion (minutos): ";
     int dur = leerEntero();
     cout << "Genero: ";
     string gen = leerLinea();
@@ -385,7 +379,7 @@ void opcionRegistrarContenido(vector<Contenido *> &contenidos) {
     string nombre = leerLinea();
     cout << "Descripcion: ";
     string desc = leerLinea();
-    cout << "Duracion: ";
+    cout << "Duracion (minutos): ";
     int dur = leerEntero();
     cout << "Genero: ";
     string gen = leerLinea();
@@ -449,12 +443,10 @@ void opcionModificarContenido(vector<Contenido *> &contenidos) {
     string g = leerLinea();
     if (!g.empty())
       p->setGenero(g);
-    cin.ignore();
     cout << "Nueva Portada: ";
     string port = leerLinea();
     if (!port.empty())
       p->setPortada(port);
-    cin.ignore();
     cout << "Nuevo Video: ";
     string vid = leerLinea();
     if (!vid.empty())
@@ -484,17 +476,14 @@ void opcionModificarContenido(vector<Contenido *> &contenidos) {
     cout << "Duracion (minutos): ";
     int duracion = leerEntero();
     s->setDuracion(duracion);
-    cin.ignore();
     cout << "Nuevo Genero: ";
     string g = leerLinea();
     if (!g.empty())
       s->setGenero(g);
-    cin.ignore();
     cout << "Nueva Portada: ";
     string port = leerLinea();
     if (!port.empty())
       s->setPortada(port);
-    cin.ignore();
     break;
   }
   case 'c': {
@@ -546,12 +535,10 @@ void opcionModificarContenido(vector<Contenido *> &contenidos) {
     string vid = leerLinea();
     if (!vid.empty())
       targetEp->setVideo(vid);
-    cin.ignore();
     cout << "Nueva Temporada: ";
     string temp_s = leerLinea();
     if (!temp_s.empty())
       targetEp->setTemporada(stoi(temp_s));
-    cin.ignore();
     break;
   }
   case 'd': {
@@ -771,7 +758,7 @@ vector<Contenido *> cargarContenidos(string filepath) {
 
     if (tipo == "P") {
       // Pelicula
-      string id_s, nombre, descripcion, duracion_s, genero, portada, video;
+      string id_s, nombre, descripcion, duracion_s, genero, portada, video, calificacion_s, numeroCalificaciones_s;
       getline(ss, id_s, ',');
       getline(ss, nombre, ',');
       getline(ss, descripcion, ',');
@@ -779,41 +766,46 @@ vector<Contenido *> cargarContenidos(string filepath) {
       getline(ss, genero, ',');
       getline(ss, portada, ',');
       getline(ss, video, ',');
+      getline(ss, calificacion_s, ',');
+      getline(ss, numeroCalificaciones_s, ',');
 
       Pelicula *p = new Pelicula(stoi(id_s), nombre, descripcion,
-                                 stoi(duracion_s), genero, portada, video);
+                                 stoi(duracion_s), genero, portada, video, stod(calificacion_s), stoi(numeroCalificaciones_s));
       lista.push_back(p);
 
     } else if (tipo == "S") {
       // Serie
-      string id_s, nombre, descripcion, duracion_s, genero, portada;
+      string id_s, nombre, descripcion, duracion_s, genero, portada, calificacion_s, numeroCalificaciones_s;
       getline(ss, id_s, ',');
       getline(ss, nombre, ',');
       getline(ss, descripcion, ',');
       getline(ss, duracion_s, ',');
       getline(ss, genero, ',');
-      getline(ss, portada, ','); // Último parámetro de Serie
+      getline(ss, portada, ',');
+      getline(ss, calificacion_s, ',');
+      getline(ss, numeroCalificaciones_s, ',');
 
       Serie *s = new Serie(stoi(id_s), nombre, descripcion, stoi(duracion_s),
-                           genero, portada);
+                           genero, portada, stod(calificacion_s), stoi(numeroCalificaciones_s));
       lista.push_back(s);
       ultimaSerie = s;
 
     } else if (tipo == "E") {
       // Episodio
-      string id_s, nombre, descripcion, duracion_s, genero, video, temporada_s;
+      string id_s, nombre, descripcion, duracion_s, genero, video, temporada_s, calificacion_s, numeroCalificaciones_s;
       getline(ss, id_s, ',');
       getline(ss, nombre, ',');
       getline(ss, descripcion, ',');
       getline(ss, duracion_s, ',');
       getline(ss, genero, ',');
-      getline(ss, video,
-              ','); // Se salta la lectura de portada directamente a video
+      getline(ss, video, ','); 
       getline(ss, temporada_s, ',');
+      getline(ss, calificacion_s, ',');
+      getline(ss, numeroCalificaciones_s, ',');
 
       Episodio *ep =
           new Episodio(stoi(id_s), nombre, descripcion, stoi(duracion_s),
-                       genero, video, stoi(temporada_s), nullptr);
+                       genero, video, stoi(temporada_s), nullptr, stod(calificacion_s), stoi(numeroCalificaciones_s));
 
       if (ultimaSerie != nullptr) {
         ultimaSerie->addEpisodio(ep);
@@ -844,7 +836,7 @@ void guardarDatos(string path, const vector<Contenido *> &lista) {
       archivo << "P," << p->getId() << "," << p->getNombre() << ","
               << p->getDescripcion() << "," << p->getDuracion() << ","
               << p->getGenero() << "," << p->getPortada() << ","
-              << p->getVideo() << "\n";
+              << p->getVideo() << "," << p->getCalificacion() << "," << p->getNumeroCalificaciones() << "\n";
       continue;
     }
 
@@ -853,14 +845,14 @@ void guardarDatos(string path, const vector<Contenido *> &lista) {
       // Serie omite video
       archivo << "S," << s->getId() << "," << s->getNombre() << ","
               << s->getDescripcion() << "," << s->getDuracion() << ","
-              << s->getGenero() << "," << s->getPortada() << "\n";
+              << s->getGenero() << "," << s->getPortada() << "," << s->getCalificacion() << "," << s->getNumeroCalificaciones() << "\n";
 
       for (Episodio *ep : s->getEpisodios()) {
         // Episodio omite portada
         archivo << "E," << ep->getId() << "," << ep->getNombre() << ","
                 << ep->getDescripcion() << "," << ep->getDuracion() << ","
                 << ep->getGenero() << "," << ep->getVideo() << ","
-                << ep->getTemporada() << "\n";
+                << ep->getTemporada() << "," << ep->getCalificacion() << "," << ep->getNumeroCalificaciones() << "\n";
       }
     }
   }
