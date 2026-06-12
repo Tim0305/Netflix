@@ -23,9 +23,20 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(Netflix
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
-        Contenido.h Episodio.h Pelicula.h Serie.h Temporada.h Usuario.h
+        Episodio.h Pelicula.h Serie.h Temporada.h Usuario.h
         loginwindow.h loginwindow.cpp loginwindow.ui
         signupwindow.h signupwindow.cpp signupwindow.ui
+        Contenido.h
+        adminwindow.h adminwindow.cpp adminwindow.ui
+        registrarusuariowindow.h registrarusuariowindow.cpp registrarusuariowindow.ui
+        usuarioswindow.h usuarioswindow.cpp usuarioswindow.ui
+        usuariowidget.h usuariowidget.cpp usuariowidget.ui
+        modificarusuariowindow.h modificarusuariowindow.cpp modificarusuariowindow.ui
+        generoswindow.h generoswindow.cpp generoswindow.ui
+        generowidget.h generowidget.cpp generowidget.ui
+        peliculasadminwindow.h peliculasadminwindow.cpp peliculasadminwindow.ui
+
+
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET Netflix APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR

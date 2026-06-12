@@ -1,0 +1,79 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-3a365ef44cfa0c016b2f.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Netflix",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "Netflix::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Netflix-Debug-002d036276859dffaa2b.json",
+					"name" : "Netflix",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Netflix_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Netflix_autogen-Debug-cea929b606f3ee82aca3.json",
+					"name" : "Netflix_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Netflix_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Netflix_autogen_timestamp_deps-Debug-75f02254e92723ca73fd.json",
+					"name" : "Netflix_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/Users/timoteo/Materias/Tec de Monterrey/2do Semestre/Programacion Orientada a Objetos/ProyectoFinal/Netflix/build/Qt_6_11_1_for_macOS-Debug",
+		"source" : "/Users/timoteo/Materias/Tec de Monterrey/2do Semestre/Programacion Orientada a Objetos/ProyectoFinal/Netflix"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}

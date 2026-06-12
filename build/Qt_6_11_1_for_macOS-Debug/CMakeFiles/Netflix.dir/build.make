@@ -146,13 +146,133 @@ CMakeFiles/Netflix.dir/signupwindow.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Netflix.dir/signupwindow.cpp.s"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/timoteo/Materias/Tec de Monterrey/2do Semestre/Programacion Orientada a Objetos/ProyectoFinal/Netflix/signupwindow.cpp" -o CMakeFiles/Netflix.dir/signupwindow.cpp.s
 
+CMakeFiles/Netflix.dir/adminwindow.cpp.o: CMakeFiles/Netflix.dir/flags.make
+CMakeFiles/Netflix.dir/adminwindow.cpp.o: /Users/timoteo/Materias/Tec\ de\ Monterrey/2do\ Semestre/Programacion\ Orientada\ a\ Objetos/ProyectoFinal/Netflix/adminwindow.cpp
+CMakeFiles/Netflix.dir/adminwindow.cpp.o: CMakeFiles/Netflix.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/timoteo/Materias/Tec de Monterrey/2do Semestre/Programacion Orientada a Objetos/ProyectoFinal/Netflix/build/Qt_6_11_1_for_macOS-Debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Netflix.dir/adminwindow.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Netflix.dir/adminwindow.cpp.o -MF CMakeFiles/Netflix.dir/adminwindow.cpp.o.d -o CMakeFiles/Netflix.dir/adminwindow.cpp.o -c "/Users/timoteo/Materias/Tec de Monterrey/2do Semestre/Programacion Orientada a Objetos/ProyectoFinal/Netflix/adminwindow.cpp"
+
+CMakeFiles/Netflix.dir/adminwindow.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Netflix.dir/adminwindow.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/timoteo/Materias/Tec de Monterrey/2do Semestre/Programacion Orientada a Objetos/ProyectoFinal/Netflix/adminwindow.cpp" > CMakeFiles/Netflix.dir/adminwindow.cpp.i
+
+CMakeFiles/Netflix.dir/adminwindow.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Netflix.dir/adminwindow.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/timoteo/Materias/Tec de Monterrey/2do Semestre/Programacion Orientada a Objetos/ProyectoFinal/Netflix/adminwindow.cpp" -o CMakeFiles/Netflix.dir/adminwindow.cpp.s
+
+CMakeFiles/Netflix.dir/registrarusuariowindow.cpp.o: CMakeFiles/Netflix.dir/flags.make
+CMakeFiles/Netflix.dir/registrarusuariowindow.cpp.o: /Users/timoteo/Materias/Tec\ de\ Monterrey/2do\ Semestre/Programacion\ Orientada\ a\ Objetos/ProyectoFinal/Netflix/registrarusuariowindow.cpp
+CMakeFiles/Netflix.dir/registrarusuariowindow.cpp.o: CMakeFiles/Netflix.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/timoteo/Materias/Tec de Monterrey/2do Semestre/Programacion Orientada a Objetos/ProyectoFinal/Netflix/build/Qt_6_11_1_for_macOS-Debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Netflix.dir/registrarusuariowindow.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Netflix.dir/registrarusuariowindow.cpp.o -MF CMakeFiles/Netflix.dir/registrarusuariowindow.cpp.o.d -o CMakeFiles/Netflix.dir/registrarusuariowindow.cpp.o -c "/Users/timoteo/Materias/Tec de Monterrey/2do Semestre/Programacion Orientada a Objetos/ProyectoFinal/Netflix/registrarusuariowindow.cpp"
+
+CMakeFiles/Netflix.dir/registrarusuariowindow.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Netflix.dir/registrarusuariowindow.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/timoteo/Materias/Tec de Monterrey/2do Semestre/Programacion Orientada a Objetos/ProyectoFinal/Netflix/registrarusuariowindow.cpp" > CMakeFiles/Netflix.dir/registrarusuariowindow.cpp.i
+
+CMakeFiles/Netflix.dir/registrarusuariowindow.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Netflix.dir/registrarusuariowindow.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/timoteo/Materias/Tec de Monterrey/2do Semestre/Programacion Orientada a Objetos/ProyectoFinal/Netflix/registrarusuariowindow.cpp" -o CMakeFiles/Netflix.dir/registrarusuariowindow.cpp.s
+
+CMakeFiles/Netflix.dir/usuarioswindow.cpp.o: CMakeFiles/Netflix.dir/flags.make
+CMakeFiles/Netflix.dir/usuarioswindow.cpp.o: /Users/timoteo/Materias/Tec\ de\ Monterrey/2do\ Semestre/Programacion\ Orientada\ a\ Objetos/ProyectoFinal/Netflix/usuarioswindow.cpp
+CMakeFiles/Netflix.dir/usuarioswindow.cpp.o: CMakeFiles/Netflix.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/timoteo/Materias/Tec de Monterrey/2do Semestre/Programacion Orientada a Objetos/ProyectoFinal/Netflix/build/Qt_6_11_1_for_macOS-Debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Netflix.dir/usuarioswindow.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Netflix.dir/usuarioswindow.cpp.o -MF CMakeFiles/Netflix.dir/usuarioswindow.cpp.o.d -o CMakeFiles/Netflix.dir/usuarioswindow.cpp.o -c "/Users/timoteo/Materias/Tec de Monterrey/2do Semestre/Programacion Orientada a Objetos/ProyectoFinal/Netflix/usuarioswindow.cpp"
+
+CMakeFiles/Netflix.dir/usuarioswindow.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Netflix.dir/usuarioswindow.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/timoteo/Materias/Tec de Monterrey/2do Semestre/Programacion Orientada a Objetos/ProyectoFinal/Netflix/usuarioswindow.cpp" > CMakeFiles/Netflix.dir/usuarioswindow.cpp.i
+
+CMakeFiles/Netflix.dir/usuarioswindow.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Netflix.dir/usuarioswindow.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/timoteo/Materias/Tec de Monterrey/2do Semestre/Programacion Orientada a Objetos/ProyectoFinal/Netflix/usuarioswindow.cpp" -o CMakeFiles/Netflix.dir/usuarioswindow.cpp.s
+
+CMakeFiles/Netflix.dir/usuariowidget.cpp.o: CMakeFiles/Netflix.dir/flags.make
+CMakeFiles/Netflix.dir/usuariowidget.cpp.o: /Users/timoteo/Materias/Tec\ de\ Monterrey/2do\ Semestre/Programacion\ Orientada\ a\ Objetos/ProyectoFinal/Netflix/usuariowidget.cpp
+CMakeFiles/Netflix.dir/usuariowidget.cpp.o: CMakeFiles/Netflix.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/timoteo/Materias/Tec de Monterrey/2do Semestre/Programacion Orientada a Objetos/ProyectoFinal/Netflix/build/Qt_6_11_1_for_macOS-Debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/Netflix.dir/usuariowidget.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Netflix.dir/usuariowidget.cpp.o -MF CMakeFiles/Netflix.dir/usuariowidget.cpp.o.d -o CMakeFiles/Netflix.dir/usuariowidget.cpp.o -c "/Users/timoteo/Materias/Tec de Monterrey/2do Semestre/Programacion Orientada a Objetos/ProyectoFinal/Netflix/usuariowidget.cpp"
+
+CMakeFiles/Netflix.dir/usuariowidget.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Netflix.dir/usuariowidget.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/timoteo/Materias/Tec de Monterrey/2do Semestre/Programacion Orientada a Objetos/ProyectoFinal/Netflix/usuariowidget.cpp" > CMakeFiles/Netflix.dir/usuariowidget.cpp.i
+
+CMakeFiles/Netflix.dir/usuariowidget.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Netflix.dir/usuariowidget.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/timoteo/Materias/Tec de Monterrey/2do Semestre/Programacion Orientada a Objetos/ProyectoFinal/Netflix/usuariowidget.cpp" -o CMakeFiles/Netflix.dir/usuariowidget.cpp.s
+
+CMakeFiles/Netflix.dir/modificarusuariowindow.cpp.o: CMakeFiles/Netflix.dir/flags.make
+CMakeFiles/Netflix.dir/modificarusuariowindow.cpp.o: /Users/timoteo/Materias/Tec\ de\ Monterrey/2do\ Semestre/Programacion\ Orientada\ a\ Objetos/ProyectoFinal/Netflix/modificarusuariowindow.cpp
+CMakeFiles/Netflix.dir/modificarusuariowindow.cpp.o: CMakeFiles/Netflix.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/timoteo/Materias/Tec de Monterrey/2do Semestre/Programacion Orientada a Objetos/ProyectoFinal/Netflix/build/Qt_6_11_1_for_macOS-Debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/Netflix.dir/modificarusuariowindow.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Netflix.dir/modificarusuariowindow.cpp.o -MF CMakeFiles/Netflix.dir/modificarusuariowindow.cpp.o.d -o CMakeFiles/Netflix.dir/modificarusuariowindow.cpp.o -c "/Users/timoteo/Materias/Tec de Monterrey/2do Semestre/Programacion Orientada a Objetos/ProyectoFinal/Netflix/modificarusuariowindow.cpp"
+
+CMakeFiles/Netflix.dir/modificarusuariowindow.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Netflix.dir/modificarusuariowindow.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/timoteo/Materias/Tec de Monterrey/2do Semestre/Programacion Orientada a Objetos/ProyectoFinal/Netflix/modificarusuariowindow.cpp" > CMakeFiles/Netflix.dir/modificarusuariowindow.cpp.i
+
+CMakeFiles/Netflix.dir/modificarusuariowindow.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Netflix.dir/modificarusuariowindow.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/timoteo/Materias/Tec de Monterrey/2do Semestre/Programacion Orientada a Objetos/ProyectoFinal/Netflix/modificarusuariowindow.cpp" -o CMakeFiles/Netflix.dir/modificarusuariowindow.cpp.s
+
+CMakeFiles/Netflix.dir/generoswindow.cpp.o: CMakeFiles/Netflix.dir/flags.make
+CMakeFiles/Netflix.dir/generoswindow.cpp.o: /Users/timoteo/Materias/Tec\ de\ Monterrey/2do\ Semestre/Programacion\ Orientada\ a\ Objetos/ProyectoFinal/Netflix/generoswindow.cpp
+CMakeFiles/Netflix.dir/generoswindow.cpp.o: CMakeFiles/Netflix.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/timoteo/Materias/Tec de Monterrey/2do Semestre/Programacion Orientada a Objetos/ProyectoFinal/Netflix/build/Qt_6_11_1_for_macOS-Debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/Netflix.dir/generoswindow.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Netflix.dir/generoswindow.cpp.o -MF CMakeFiles/Netflix.dir/generoswindow.cpp.o.d -o CMakeFiles/Netflix.dir/generoswindow.cpp.o -c "/Users/timoteo/Materias/Tec de Monterrey/2do Semestre/Programacion Orientada a Objetos/ProyectoFinal/Netflix/generoswindow.cpp"
+
+CMakeFiles/Netflix.dir/generoswindow.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Netflix.dir/generoswindow.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/timoteo/Materias/Tec de Monterrey/2do Semestre/Programacion Orientada a Objetos/ProyectoFinal/Netflix/generoswindow.cpp" > CMakeFiles/Netflix.dir/generoswindow.cpp.i
+
+CMakeFiles/Netflix.dir/generoswindow.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Netflix.dir/generoswindow.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/timoteo/Materias/Tec de Monterrey/2do Semestre/Programacion Orientada a Objetos/ProyectoFinal/Netflix/generoswindow.cpp" -o CMakeFiles/Netflix.dir/generoswindow.cpp.s
+
+CMakeFiles/Netflix.dir/generowidget.cpp.o: CMakeFiles/Netflix.dir/flags.make
+CMakeFiles/Netflix.dir/generowidget.cpp.o: /Users/timoteo/Materias/Tec\ de\ Monterrey/2do\ Semestre/Programacion\ Orientada\ a\ Objetos/ProyectoFinal/Netflix/generowidget.cpp
+CMakeFiles/Netflix.dir/generowidget.cpp.o: CMakeFiles/Netflix.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/timoteo/Materias/Tec de Monterrey/2do Semestre/Programacion Orientada a Objetos/ProyectoFinal/Netflix/build/Qt_6_11_1_for_macOS-Debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/Netflix.dir/generowidget.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Netflix.dir/generowidget.cpp.o -MF CMakeFiles/Netflix.dir/generowidget.cpp.o.d -o CMakeFiles/Netflix.dir/generowidget.cpp.o -c "/Users/timoteo/Materias/Tec de Monterrey/2do Semestre/Programacion Orientada a Objetos/ProyectoFinal/Netflix/generowidget.cpp"
+
+CMakeFiles/Netflix.dir/generowidget.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Netflix.dir/generowidget.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/timoteo/Materias/Tec de Monterrey/2do Semestre/Programacion Orientada a Objetos/ProyectoFinal/Netflix/generowidget.cpp" > CMakeFiles/Netflix.dir/generowidget.cpp.i
+
+CMakeFiles/Netflix.dir/generowidget.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Netflix.dir/generowidget.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/timoteo/Materias/Tec de Monterrey/2do Semestre/Programacion Orientada a Objetos/ProyectoFinal/Netflix/generowidget.cpp" -o CMakeFiles/Netflix.dir/generowidget.cpp.s
+
+CMakeFiles/Netflix.dir/peliculasadminwindow.cpp.o: CMakeFiles/Netflix.dir/flags.make
+CMakeFiles/Netflix.dir/peliculasadminwindow.cpp.o: /Users/timoteo/Materias/Tec\ de\ Monterrey/2do\ Semestre/Programacion\ Orientada\ a\ Objetos/ProyectoFinal/Netflix/peliculasadminwindow.cpp
+CMakeFiles/Netflix.dir/peliculasadminwindow.cpp.o: CMakeFiles/Netflix.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/timoteo/Materias/Tec de Monterrey/2do Semestre/Programacion Orientada a Objetos/ProyectoFinal/Netflix/build/Qt_6_11_1_for_macOS-Debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/Netflix.dir/peliculasadminwindow.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Netflix.dir/peliculasadminwindow.cpp.o -MF CMakeFiles/Netflix.dir/peliculasadminwindow.cpp.o.d -o CMakeFiles/Netflix.dir/peliculasadminwindow.cpp.o -c "/Users/timoteo/Materias/Tec de Monterrey/2do Semestre/Programacion Orientada a Objetos/ProyectoFinal/Netflix/peliculasadminwindow.cpp"
+
+CMakeFiles/Netflix.dir/peliculasadminwindow.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Netflix.dir/peliculasadminwindow.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/timoteo/Materias/Tec de Monterrey/2do Semestre/Programacion Orientada a Objetos/ProyectoFinal/Netflix/peliculasadminwindow.cpp" > CMakeFiles/Netflix.dir/peliculasadminwindow.cpp.i
+
+CMakeFiles/Netflix.dir/peliculasadminwindow.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Netflix.dir/peliculasadminwindow.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/timoteo/Materias/Tec de Monterrey/2do Semestre/Programacion Orientada a Objetos/ProyectoFinal/Netflix/peliculasadminwindow.cpp" -o CMakeFiles/Netflix.dir/peliculasadminwindow.cpp.s
+
 # Object files for target Netflix
 Netflix_OBJECTS = \
 "CMakeFiles/Netflix.dir/Netflix_autogen/mocs_compilation.cpp.o" \
 "CMakeFiles/Netflix.dir/main.cpp.o" \
 "CMakeFiles/Netflix.dir/mainwindow.cpp.o" \
 "CMakeFiles/Netflix.dir/loginwindow.cpp.o" \
-"CMakeFiles/Netflix.dir/signupwindow.cpp.o"
+"CMakeFiles/Netflix.dir/signupwindow.cpp.o" \
+"CMakeFiles/Netflix.dir/adminwindow.cpp.o" \
+"CMakeFiles/Netflix.dir/registrarusuariowindow.cpp.o" \
+"CMakeFiles/Netflix.dir/usuarioswindow.cpp.o" \
+"CMakeFiles/Netflix.dir/usuariowidget.cpp.o" \
+"CMakeFiles/Netflix.dir/modificarusuariowindow.cpp.o" \
+"CMakeFiles/Netflix.dir/generoswindow.cpp.o" \
+"CMakeFiles/Netflix.dir/generowidget.cpp.o" \
+"CMakeFiles/Netflix.dir/peliculasadminwindow.cpp.o"
 
 # External object files for target Netflix
 Netflix_EXTERNAL_OBJECTS =
@@ -162,12 +282,20 @@ Netflix.app/Contents/MacOS/Netflix: CMakeFiles/Netflix.dir/main.cpp.o
 Netflix.app/Contents/MacOS/Netflix: CMakeFiles/Netflix.dir/mainwindow.cpp.o
 Netflix.app/Contents/MacOS/Netflix: CMakeFiles/Netflix.dir/loginwindow.cpp.o
 Netflix.app/Contents/MacOS/Netflix: CMakeFiles/Netflix.dir/signupwindow.cpp.o
+Netflix.app/Contents/MacOS/Netflix: CMakeFiles/Netflix.dir/adminwindow.cpp.o
+Netflix.app/Contents/MacOS/Netflix: CMakeFiles/Netflix.dir/registrarusuariowindow.cpp.o
+Netflix.app/Contents/MacOS/Netflix: CMakeFiles/Netflix.dir/usuarioswindow.cpp.o
+Netflix.app/Contents/MacOS/Netflix: CMakeFiles/Netflix.dir/usuariowidget.cpp.o
+Netflix.app/Contents/MacOS/Netflix: CMakeFiles/Netflix.dir/modificarusuariowindow.cpp.o
+Netflix.app/Contents/MacOS/Netflix: CMakeFiles/Netflix.dir/generoswindow.cpp.o
+Netflix.app/Contents/MacOS/Netflix: CMakeFiles/Netflix.dir/generowidget.cpp.o
+Netflix.app/Contents/MacOS/Netflix: CMakeFiles/Netflix.dir/peliculasadminwindow.cpp.o
 Netflix.app/Contents/MacOS/Netflix: CMakeFiles/Netflix.dir/build.make
 Netflix.app/Contents/MacOS/Netflix: /Users/timoteo/Qt/6.11.1/macos/lib/QtWidgets.framework/Versions/A/QtWidgets
 Netflix.app/Contents/MacOS/Netflix: /Users/timoteo/Qt/6.11.1/macos/lib/QtGui.framework/Versions/A/QtGui
 Netflix.app/Contents/MacOS/Netflix: /Users/timoteo/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/QtCore
 Netflix.app/Contents/MacOS/Netflix: CMakeFiles/Netflix.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="/Users/timoteo/Materias/Tec de Monterrey/2do Semestre/Programacion Orientada a Objetos/ProyectoFinal/Netflix/build/Qt_6_11_1_for_macOS-Debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable Netflix.app/Contents/MacOS/Netflix"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="/Users/timoteo/Materias/Tec de Monterrey/2do Semestre/Programacion Orientada a Objetos/ProyectoFinal/Netflix/build/Qt_6_11_1_for_macOS-Debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_15) "Linking CXX executable Netflix.app/Contents/MacOS/Netflix"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Netflix.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

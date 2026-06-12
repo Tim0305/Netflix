@@ -1,5 +1,6 @@
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
+#include <QMessageBox>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -21,7 +22,7 @@ MainWindow::MainWindow(QWidget *parent)
     // Receptores de senales
     connect(
         loginWindow,
-        &LoginWindow::signup,
+        &LoginWindow::gotoSignup,
         this,
         &MainWindow::showSignUpWindow);
 
@@ -30,6 +31,12 @@ MainWindow::MainWindow(QWidget *parent)
         &SignUpWindow::return2LoginWindow,
         this,
         &MainWindow::showLoginWindow);
+
+    connect(
+        loginWindow,
+        &LoginWindow::gotoAdmin,
+        this,
+        &MainWindow::showAdminWindow);
 }
 
 MainWindow::~MainWindow()
@@ -45,4 +52,36 @@ void MainWindow::showLoginWindow() {
 void MainWindow::showSignUpWindow() {
     ui->stackedWidget->setCurrentWidget(signUpWindow);
     signUpWindow->reset();
+}
+
+void MainWindow::showAdminWindow() {
+    AdminWindow* adminWindow = new AdminWindow();
+    ui->stackedWidget->addWidget(adminWindow);
+    ui->stackedWidget->setCurrentWidget(adminWindow);
+
+    connect(
+        adminWindow,
+        &AdminWindow::logout,
+        this,
+        &MainWindow::logout);
+}
+
+void MainWindow::logout() {
+    QMessageBox::StandardButton respuesta;
+
+    respuesta = QMessageBox::question(
+        this,
+        "Cerrar sesión",
+        "¿Deseas cerrar sesión?",
+        QMessageBox::Yes | QMessageBox::No
+        );
+
+    if (respuesta == QMessageBox::No)
+        return;
+
+    QWidget* widget = ui->stackedWidget->currentWidget();
+    showLoginWindow();
+    ui->stackedWidget->removeWidget(widget);
+    widget->deleteLater();
+
 }

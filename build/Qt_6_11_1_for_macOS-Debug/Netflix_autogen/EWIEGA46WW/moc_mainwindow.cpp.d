@@ -750,8 +750,12 @@
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/limits.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/ptrcheck.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/stdarg.h \
+  /Users/timoteo/Materias/Tec\ de\ Monterrey/2do\ Semestre/Programacion\ Orientada\ a\ Objetos/ProyectoFinal/Netflix/adminwindow.h \
   /Users/timoteo/Materias/Tec\ de\ Monterrey/2do\ Semestre/Programacion\ Orientada\ a\ Objetos/ProyectoFinal/Netflix/loginwindow.h \
+  /Users/timoteo/Materias/Tec\ de\ Monterrey/2do\ Semestre/Programacion\ Orientada\ a\ Objetos/ProyectoFinal/Netflix/modificarusuariowindow.h \
+  /Users/timoteo/Materias/Tec\ de\ Monterrey/2do\ Semestre/Programacion\ Orientada\ a\ Objetos/ProyectoFinal/Netflix/registrarusuariowindow.h \
   /Users/timoteo/Materias/Tec\ de\ Monterrey/2do\ Semestre/Programacion\ Orientada\ a\ Objetos/ProyectoFinal/Netflix/signupwindow.h \
+  /Users/timoteo/Materias/Tec\ de\ Monterrey/2do\ Semestre/Programacion\ Orientada\ a\ Objetos/ProyectoFinal/Netflix/usuarioswindow.h \
   /Users/timoteo/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/q17memory.h \
   /Users/timoteo/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/q20bit.h \
   /Users/timoteo/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/q20functional.h \
@@ -761,6 +765,7 @@
   /Users/timoteo/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/q20utility.h \
   /Users/timoteo/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/q23type_traits.h \
   /Users/timoteo/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/q23utility.h \
+  /Users/timoteo/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/qabstractitemmodel.h \
   /Users/timoteo/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/qalgorithms.h \
   /Users/timoteo/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/qalloc.h \
   /Users/timoteo/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/qanystringview.h \
@@ -804,11 +809,13 @@
   /Users/timoteo/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/qhash.h \
   /Users/timoteo/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/qhashfunctions.h \
   /Users/timoteo/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/qiodevicebase.h \
+  /Users/timoteo/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/qitemselectionmodel.h \
   /Users/timoteo/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/qiterable.h \
   /Users/timoteo/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/qiterator.h \
   /Users/timoteo/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/qlatin1stringview.h \
   /Users/timoteo/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/qline.h \
   /Users/timoteo/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/qlist.h \
+  /Users/timoteo/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/qlocale.h \
   /Users/timoteo/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/qlogging.h \
   /Users/timoteo/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/qmalloc.h \
   /Users/timoteo/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/qmap.h \
@@ -829,6 +836,7 @@
   /Users/timoteo/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/qprocessordetection.h \
   /Users/timoteo/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/qrect.h \
   /Users/timoteo/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/qrefcount.h \
+  /Users/timoteo/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/qregularexpression.h \
   /Users/timoteo/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/qscopedpointer.h \
   /Users/timoteo/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/qscopeguard.h \
   /Users/timoteo/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/qset.h \
@@ -904,11 +912,26 @@
   /Users/timoteo/Qt/6.11.1/macos/lib/QtGui.framework/Versions/A/Headers/qtguiexports.h \
   /Users/timoteo/Qt/6.11.1/macos/lib/QtGui.framework/Versions/A/Headers/qtguiglobal.h \
   /Users/timoteo/Qt/6.11.1/macos/lib/QtGui.framework/Versions/A/Headers/qtransform.h \
+  /Users/timoteo/Qt/6.11.1/macos/lib/QtGui.framework/Versions/A/Headers/qvalidator.h \
   /Users/timoteo/Qt/6.11.1/macos/lib/QtGui.framework/Versions/A/Headers/qwindowdefs.h \
+  /Users/timoteo/Qt/6.11.1/macos/lib/QtWidgets.framework/Versions/A/Headers/QListWidgetItem \
   /Users/timoteo/Qt/6.11.1/macos/lib/QtWidgets.framework/Versions/A/Headers/QMainWindow \
   /Users/timoteo/Qt/6.11.1/macos/lib/QtWidgets.framework/Versions/A/Headers/QWidget \
+  /Users/timoteo/Qt/6.11.1/macos/lib/QtWidgets.framework/Versions/A/Headers/qabstractitemdelegate.h \
+  /Users/timoteo/Qt/6.11.1/macos/lib/QtWidgets.framework/Versions/A/Headers/qabstractitemview.h \
+  /Users/timoteo/Qt/6.11.1/macos/lib/QtWidgets.framework/Versions/A/Headers/qabstractscrollarea.h \
+  /Users/timoteo/Qt/6.11.1/macos/lib/QtWidgets.framework/Versions/A/Headers/qabstractslider.h \
+  /Users/timoteo/Qt/6.11.1/macos/lib/QtWidgets.framework/Versions/A/Headers/qabstractspinbox.h \
+  /Users/timoteo/Qt/6.11.1/macos/lib/QtWidgets.framework/Versions/A/Headers/qframe.h \
+  /Users/timoteo/Qt/6.11.1/macos/lib/QtWidgets.framework/Versions/A/Headers/qlistview.h \
+  /Users/timoteo/Qt/6.11.1/macos/lib/QtWidgets.framework/Versions/A/Headers/qlistwidget.h \
   /Users/timoteo/Qt/6.11.1/macos/lib/QtWidgets.framework/Versions/A/Headers/qmainwindow.h \
+  /Users/timoteo/Qt/6.11.1/macos/lib/QtWidgets.framework/Versions/A/Headers/qrubberband.h \
   /Users/timoteo/Qt/6.11.1/macos/lib/QtWidgets.framework/Versions/A/Headers/qsizepolicy.h \
+  /Users/timoteo/Qt/6.11.1/macos/lib/QtWidgets.framework/Versions/A/Headers/qslider.h \
+  /Users/timoteo/Qt/6.11.1/macos/lib/QtWidgets.framework/Versions/A/Headers/qstyle.h \
+  /Users/timoteo/Qt/6.11.1/macos/lib/QtWidgets.framework/Versions/A/Headers/qstyleoption.h \
+  /Users/timoteo/Qt/6.11.1/macos/lib/QtWidgets.framework/Versions/A/Headers/qtabbar.h \
   /Users/timoteo/Qt/6.11.1/macos/lib/QtWidgets.framework/Versions/A/Headers/qtabwidget.h \
   /Users/timoteo/Qt/6.11.1/macos/lib/QtWidgets.framework/Versions/A/Headers/qtwidgets-config.h \
   /Users/timoteo/Qt/6.11.1/macos/lib/QtWidgets.framework/Versions/A/Headers/qtwidgetsexports.h \

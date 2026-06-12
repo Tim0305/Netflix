@@ -996,6 +996,29 @@ CMakeFiles/Netflix.dir/mainwindow.cpp.o: \
   /Users/timoteo/Materias/Tec\ de\ Monterrey/2do\ Semestre/Programacion\ Orientada\ a\ Objetos/ProyectoFinal/Netflix/loginwindow.h \
   /Users/timoteo/Qt/6.11.1/macos/lib/QtWidgets.framework/Headers/QWidget \
   /Users/timoteo/Materias/Tec\ de\ Monterrey/2do\ Semestre/Programacion\ Orientada\ a\ Objetos/ProyectoFinal/Netflix/signupwindow.h \
+  /Users/timoteo/Materias/Tec\ de\ Monterrey/2do\ Semestre/Programacion\ Orientada\ a\ Objetos/ProyectoFinal/Netflix/adminwindow.h \
+  /Users/timoteo/Qt/6.11.1/macos/lib/QtWidgets.framework/Headers/QListWidgetItem \
+  /Users/timoteo/Qt/6.11.1/macos/lib/QtWidgets.framework/Headers/qlistwidget.h \
+  /Users/timoteo/Qt/6.11.1/macos/lib/QtWidgets.framework/Headers/qlistview.h \
+  /Users/timoteo/Qt/6.11.1/macos/lib/QtWidgets.framework/Headers/qabstractitemview.h \
+  /Users/timoteo/Qt/6.11.1/macos/lib/QtWidgets.framework/Headers/qabstractscrollarea.h \
+  /Users/timoteo/Qt/6.11.1/macos/lib/QtWidgets.framework/Headers/qframe.h \
+  /Users/timoteo/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qabstractitemmodel.h \
+  /Users/timoteo/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qitemselectionmodel.h \
+  /Users/timoteo/Qt/6.11.1/macos/lib/QtWidgets.framework/Headers/qabstractitemdelegate.h \
+  /Users/timoteo/Qt/6.11.1/macos/lib/QtWidgets.framework/Headers/qstyleoption.h \
+  /Users/timoteo/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qlocale.h \
+  /Users/timoteo/Qt/6.11.1/macos/lib/QtWidgets.framework/Headers/qabstractspinbox.h \
+  /Users/timoteo/Qt/6.11.1/macos/lib/QtGui.framework/Headers/qvalidator.h \
+  /Users/timoteo/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qregularexpression.h \
+  /Users/timoteo/Qt/6.11.1/macos/lib/QtWidgets.framework/Headers/qslider.h \
+  /Users/timoteo/Qt/6.11.1/macos/lib/QtWidgets.framework/Headers/qabstractslider.h \
+  /Users/timoteo/Qt/6.11.1/macos/lib/QtWidgets.framework/Headers/qstyle.h \
+  /Users/timoteo/Qt/6.11.1/macos/lib/QtWidgets.framework/Headers/qtabbar.h \
+  /Users/timoteo/Qt/6.11.1/macos/lib/QtWidgets.framework/Headers/qrubberband.h \
+  /Users/timoteo/Materias/Tec\ de\ Monterrey/2do\ Semestre/Programacion\ Orientada\ a\ Objetos/ProyectoFinal/Netflix/usuarioswindow.h \
+  /Users/timoteo/Materias/Tec\ de\ Monterrey/2do\ Semestre/Programacion\ Orientada\ a\ Objetos/ProyectoFinal/Netflix/modificarusuariowindow.h \
+  /Users/timoteo/Materias/Tec\ de\ Monterrey/2do\ Semestre/Programacion\ Orientada\ a\ Objetos/ProyectoFinal/Netflix/registrarusuariowindow.h \
   /Users/timoteo/Materias/Tec\ de\ Monterrey/2do\ Semestre/Programacion\ Orientada\ a\ Objetos/ProyectoFinal/Netflix/build/Qt_6_11_1_for_macOS-Debug/Netflix_autogen/include/./ui_mainwindow.h \
   /Users/timoteo/Qt/6.11.1/macos/lib/QtCore.framework/Headers/QVariant \
   /Users/timoteo/Qt/6.11.1/macos/lib/QtWidgets.framework/Headers/QApplication \
@@ -1010,13 +1033,15 @@ CMakeFiles/Netflix.dir/mainwindow.cpp.o: \
   /Users/timoteo/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qcoreapplication_platform.h \
   /Users/timoteo/Qt/6.11.1/macos/lib/QtGui.framework/Headers/qguiapplication.h \
   /Users/timoteo/Qt/6.11.1/macos/lib/QtGui.framework/Headers/qinputmethod.h \
-  /Users/timoteo/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qlocale.h \
   /Users/timoteo/Qt/6.11.1/macos/lib/QtGui.framework/Headers/qguiapplication_platform.h \
   /Users/timoteo/Qt/6.11.1/macos/lib/QtWidgets.framework/Headers/QStackedWidget \
   /Users/timoteo/Qt/6.11.1/macos/lib/QtWidgets.framework/Headers/qstackedwidget.h \
-  /Users/timoteo/Qt/6.11.1/macos/lib/QtWidgets.framework/Headers/qframe.h \
   /Users/timoteo/Qt/6.11.1/macos/lib/QtWidgets.framework/Headers/QVBoxLayout \
   /Users/timoteo/Qt/6.11.1/macos/lib/QtWidgets.framework/Headers/qboxlayout.h \
   /Users/timoteo/Qt/6.11.1/macos/lib/QtWidgets.framework/Headers/qlayout.h \
   /Users/timoteo/Qt/6.11.1/macos/lib/QtWidgets.framework/Headers/qlayoutitem.h \
-  /Users/timoteo/Qt/6.11.1/macos/lib/QtWidgets.framework/Headers/qgridlayout.h
+  /Users/timoteo/Qt/6.11.1/macos/lib/QtWidgets.framework/Headers/qgridlayout.h \
+  /Users/timoteo/Qt/6.11.1/macos/lib/QtWidgets.framework/Headers/QMessageBox \
+  /Users/timoteo/Qt/6.11.1/macos/lib/QtWidgets.framework/Headers/qmessagebox.h \
+  /Users/timoteo/Qt/6.11.1/macos/lib/QtWidgets.framework/Headers/qdialog.h \
+  /Users/timoteo/Qt/6.11.1/macos/lib/QtWidgets.framework/Headers/qdialogbuttonbox.h

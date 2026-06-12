@@ -10,6 +10,9 @@ LoginWindow::LoginWindow(QWidget *parent)
     , ui(new Ui::LoginWindow)
 {
     ui->setupUi(this);
+
+    ADMIN_USER = "admin";
+    ADMIN_PASSWORD = "admin";
 }
 
 LoginWindow::~LoginWindow()
@@ -32,13 +35,19 @@ void LoginWindow::on_loginButton_clicked()
     else {
         cout << "User: " << user << endl;
         cout << "Password: " << password << endl;
+
+        if (user == ADMIN_USER && password == ADMIN_PASSWORD) {
+            cout << "Administrador" << endl;
+            // Ir a la vista de administrador
+            emit gotoAdmin();
+        }
     }
 }
 
 void LoginWindow::on_signupButton_clicked()
 {
     // Ir al sign up page
-    emit signup();
+    emit gotoSignup();
 }
 
 void LoginWindow::reset() {
