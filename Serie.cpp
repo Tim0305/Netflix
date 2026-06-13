@@ -9,47 +9,51 @@ Serie::Serie(int id, string nombre, string descripcion, int duracion,
     : Contenido(id, nombre, descripcion, duracion, genero, portada, "") {}
 
 Serie::Serie(int id, string nombre, string descripcion, int duracion,
-             string genero, string portada, double calificacion, int numeroCalificaciones)
-    : Contenido(id, nombre, descripcion, duracion, genero, portada, "", calificacion, numeroCalificaciones) {
-}
+             string genero, string portada, double calificacion,
+             int numeroCalificaciones)
+    : Contenido(id, nombre, descripcion, duracion, genero, portada, "",
+                calificacion, numeroCalificaciones) {}
 
 Serie::~Serie() {
-  for (Episodio* episodio : episodios) {
+  for (Episodio *episodio : episodios) {
     delete episodio;
   }
 }
 
 void Serie::addEpisodio(Episodio *episodio) {
+  duracion += episodio->getDuracion();
   episodio->setSerie(this);
   episodios.push_back(episodio);
   addCalificacion(episodio->getCalificacion());
 }
 
-bool Serie::removeEpisodio(Episodio* episodio) {
-for (auto it = episodios.begin(); it != episodios.end(); ++it) {
+bool Serie::removeEpisodio(Episodio *episodio) {
+  for (auto it = episodios.begin(); it != episodios.end(); ++it) {
     if ((*it)->getId() == episodio->getId()) {
-      delete *it;            
-      episodios.erase(it);  
-      return true;         
+      delete *it;
+      duracion -= episodio->getDuracion();
+      episodios.erase(it);
+      return true;
     }
   }
-  return false; 
+  return false;
 }
 
 bool Serie::removeEpisodio(int id) {
-for (auto it = episodios.begin(); it != episodios.end(); ++it) {
+  for (auto it = episodios.begin(); it != episodios.end(); ++it) {
     if ((*it)->getId() == id) {
-      delete *it;            
-      episodios.erase(it);  
-      return true;         
+      duracion -= (*it)->getDuracion();
+      delete *it;
+      episodios.erase(it);
+      return true;
     }
   }
-  return false; 
+  return false;
 }
 
 vector<Episodio *> Serie::getEpisodios() const { return episodios; }
 
-double Serie::getCalificacion() const{
+double Serie::getCalificacion() const {
   double calificacion = 0;
   for (auto episodio : episodios) {
     calificacion += episodio->getCalificacion();
@@ -58,13 +62,11 @@ double Serie::getCalificacion() const{
   return calificacion / episodios.size();
 }
 
-void Serie::addCalificacion(double valor) {
-  return;
-}
+void Serie::addCalificacion(double valor) { return; }
 
 int Serie::getTemporadas() {
   int temporadas = 0;
-  for (auto ep: episodios) {
+  for (auto ep : episodios) {
     if (ep->getTemporada() > temporadas)
       temporadas = ep->getTemporada();
   }
@@ -72,9 +74,7 @@ int Serie::getTemporadas() {
   return temporadas;
 }
 
-int Serie::getTotalEpisodios() {
-  return episodios.size();
-}
+int Serie::getTotalEpisodios() { return episodios.size(); }
 
 string Serie::toString() {
   stringstream ss;
@@ -87,7 +87,7 @@ string Serie::toString() {
   ss << "Genero: " << getGenero() << endl;
   ss << "Temporadas: " << getTemporadas() << endl;
   ss << "Episodios: " << getTotalEpisodios();
-  for (auto ep: episodios) {
+  for (auto ep : episodios) {
     ss << endl << "   [" << ep->getId() << "] - " << ep->getNombre();
   }
   ss << endl << "===============================" << endl;

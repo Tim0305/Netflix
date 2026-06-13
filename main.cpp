@@ -364,17 +364,11 @@ void opcionRegistrarContenido(vector<Contenido *> &contenidos) {
     string nombre = leerLinea();
     cout << "Descripcion: ";
     string desc = leerLinea();
-    cout << "Duracion (minutos): ";
-    int dur = leerEntero();
-    if (dur < 0) {
-      cout << endl << "Invalido" << endl;
-      break;
-    }
     cout << "Genero: ";
     string gen = leerLinea();
     cout << "Archivo Portada: ";
     string port = leerLinea();
-    Serie *s = new Serie(idAutoincrementable, nombre, desc, dur, gen, port);
+    Serie *s = new Serie(idAutoincrementable, nombre, desc, 0, gen, port);
     contenidos.push_back(s);
     cout << endl << "Serie registrada" << endl;
     break;
@@ -392,7 +386,7 @@ void opcionRegistrarContenido(vector<Contenido *> &contenidos) {
       return;
     }
 
-    cout << endl << "Series: " << endl;
+    cout << endl << "Series:" << endl;
     mostrarSeries(contenidos);
     cout << endl << "ID de la Serie a asignar: ";
     int idSerie = leerEntero();
@@ -479,8 +473,14 @@ void opcionModificarContenido(vector<Contenido *> &contenidos) {
       p->setDescripcion(d);
     cout << "Duracion (minutos): ";
     string duracion_s = leerLinea();
-    if (!duracion_s.empty())
-      p->setDuracion(stoi(duracion_s));
+    if (!duracion_s.empty()) {
+      int duracion = stoi(duracion_s);
+      if (duracion < 0) {
+        cout << endl << "Invalido" << endl;
+        break;
+      }
+      p->setDuracion(duracion);
+    }
     cout << "Nuevo Genero: ";
     string g = leerLinea();
     if (!g.empty())
@@ -515,10 +515,6 @@ void opcionModificarContenido(vector<Contenido *> &contenidos) {
     string d = leerLinea();
     if (!d.empty())
       s->setDescripcion(d);
-    cout << "Duracion (minutos): ";
-    string duracion_s = leerLinea();
-    if (!duracion_s.empty())
-      s->setDuracion(stoi(duracion_s));
     cout << "Nuevo Genero: ";
     string g = leerLinea();
     if (!g.empty())
@@ -573,16 +569,28 @@ void opcionModificarContenido(vector<Contenido *> &contenidos) {
       targetEp->setDescripcion(d);
     cout << "Duracion (minutos): ";
     string duracion_s = leerLinea();
-    if (!duracion_s.empty())
-      targetEp->setDuracion(stoi(duracion_s));
+    if (!duracion_s.empty()) {
+      int duracion = stoi(duracion_s);
+      if (duracion < 0) {
+        cout << endl << "Invalido" << endl;
+        break;
+      }
+      targetEp->setDuracion(duracion);
+    }
     cout << "Nuevo Video: ";
     string vid = leerLinea();
     if (!vid.empty())
       targetEp->setVideo(vid);
     cout << "Nueva Temporada: ";
     string temp_s = leerLinea();
-    if (!temp_s.empty())
-      targetEp->setTemporada(stoi(temp_s));
+    if (!temp_s.empty()) {
+      int temporada = stoi(temp_s);
+      if (temporada < 1) {
+        cout << endl << "Invalido" << endl;
+        break;
+      }
+      targetEp->setTemporada(temporada);
+    }
     break;
   }
   case 'd': {
