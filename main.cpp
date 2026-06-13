@@ -250,6 +250,7 @@ void opcionMostrarCatalogo(vector<Contenido *> contenidos) {
       break;
     }
     case 3: {
+      cout << endl << "Series:" << endl;
       mostrarSeries(contenidos);
       cout << endl << "ID de la Serie: ";
       int id = leerEntero();
@@ -529,7 +530,7 @@ void opcionModificarContenido(vector<Contenido *> &contenidos) {
     break;
   }
   case 'c': {
-    cout << endl << "Series: " << endl;
+    cout << endl << "Series:" << endl;
     mostrarSeries(contenidos);
     cout << endl << "ID de la Serie dueña del episodio: ";
     int idS = leerEntero();
@@ -610,7 +611,7 @@ void opcionEliminarContenido(vector<Contenido *> &contenidos) {
 
   switch (subOpcion) {
   case 'a': {
-    cout << endl << "Peliculas: " << endl;
+    cout << endl << "Peliculas:" << endl;
     mostrarPeliculas(contenidos);
     cout << endl << "ID de la pelicula a eliminar: ";
     int id = leerEntero();
@@ -623,7 +624,7 @@ void opcionEliminarContenido(vector<Contenido *> &contenidos) {
   }
 
   case 'b': {
-    cout << endl << "Series: " << endl;
+    cout << endl << "Series:" << endl;
     mostrarSeries(contenidos);
     cout << endl << "ID de la serie a eliminar: ";
     int id = leerEntero();
@@ -635,7 +636,7 @@ void opcionEliminarContenido(vector<Contenido *> &contenidos) {
     break;
   }
   case 'c': {
-    cout << endl << "Series: " << endl;
+    cout << endl << "Series:" << endl;
     mostrarSeries(contenidos);
     cout << endl << "ID de la Serie: ";
     int idSerie = leerEntero();
@@ -684,7 +685,7 @@ void opcionCalificarContenido(vector<Contenido *> &contenidos) {
 
   switch (subOpcion) {
   case 'a': {
-    cout << endl << "Peliculas" << endl;
+    cout << endl << "Peliculas:" << endl;
     mostrarPeliculas(contenidos);
     cout << endl << "ID a calificar: ";
 
@@ -708,7 +709,7 @@ void opcionCalificarContenido(vector<Contenido *> &contenidos) {
     break;
   }
   case 'b': {
-    cout << endl << "Series" << endl;
+    cout << endl << "Series:" << endl;
     mostrarSeries(contenidos);
     cout << endl << "ID de la Serie: ";
     int idS = leerEntero();
@@ -1008,7 +1009,7 @@ void opcionVerPortada(vector<Contenido *> contenidos) {
   } while (subOpcion < 'a' || subOpcion > 'c');
 
   if (subOpcion == 'a') {
-    cout << endl << "Peliculas: " << endl;
+    cout << endl << "Peliculas:" << endl;
     mostrarPeliculas(contenidos);
     cout << "\nID de la Pelicula: ";
     int id = leerEntero();
@@ -1018,7 +1019,7 @@ void opcionVerPortada(vector<Contenido *> contenidos) {
     else
       cout << endl << "Pelicula no encontrada." << endl;
   } else if (subOpcion == 'b') {
-    cout << endl << "Series: " << endl;
+    cout << endl << "Series:" << endl;
     mostrarSeries(contenidos);
     cout << "\nID de la Serie: ";
     int id = leerEntero();
