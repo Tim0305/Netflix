@@ -24,14 +24,13 @@ void Serie::addEpisodio(Episodio *episodio) {
   duracion += episodio->getDuracion();
   episodio->setSerie(this);
   episodios.push_back(episodio);
-  addCalificacion(episodio->getCalificacion());
 }
 
 bool Serie::removeEpisodio(Episodio *episodio) {
   for (auto it = episodios.begin(); it != episodios.end(); ++it) {
     if ((*it)->getId() == episodio->getId()) {
+      duracion -= (*it)->getDuracion();
       delete *it;
-      duracion -= episodio->getDuracion();
       episodios.erase(it);
       return true;
     }
